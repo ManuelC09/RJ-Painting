@@ -1,14 +1,74 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Clock3,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 
 export default function ContactFormSection() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "Interior Painting",
+    details: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+    setMessage("");
+
+    try {
+      console.log("Submitting form:", formData);
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send request");
+      }
+
+      setMessage("Your request has been submitted successfully.");
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        service: "Interior Painting",
+        details: "",
+      });
+    } catch (error) {
+      console.error(error);
+      setMessage("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="relative overflow-hidden bg-[#F8F5F0] py-28">
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-[#8B2E35]/5 blur-3xl" />
@@ -45,9 +105,7 @@ export default function ContactFormSection() {
                   Phone Number
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">
-                  (514) 630-4638
-                </p>
+                <p className="mt-1 text-[#152536]/70">(514) 630-4638</p>
               </div>
             </div>
 
@@ -61,9 +119,7 @@ export default function ContactFormSection() {
                   Email Address
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">
-                  info@rjpainting.ca
-                </p>
+                <p className="mt-1 text-[#152536]/70">info@rjpainting.ca</p>
               </div>
             </div>
 
@@ -93,9 +149,7 @@ export default function ContactFormSection() {
                   Availability
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">
-                  Monday – Saturday
-                </p>
+                <p className="mt-1 text-[#152536]/70">Monday – Saturday</p>
               </div>
             </div>
           </div>
@@ -108,7 +162,7 @@ export default function ContactFormSection() {
           viewport={{ once: true }}
           className="rounded-[2rem] bg-white p-8 shadow-2xl sm:p-10"
         >
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-bold text-[#152536]">
@@ -116,7 +170,11 @@ export default function ContactFormSection() {
                 </label>
 
                 <input
+                  name="firstName"
                   type="text"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
                   className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
                 />
               </div>
@@ -127,7 +185,11 @@ export default function ContactFormSection() {
                 </label>
 
                 <input
+                  name="lastName"
                   type="text"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
                   className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
                 />
               </div>
@@ -140,7 +202,11 @@ export default function ContactFormSection() {
                 </label>
 
                 <input
+                  name="email"
                   type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
                 />
               </div>
@@ -151,7 +217,11 @@ export default function ContactFormSection() {
                 </label>
 
                 <input
+                  name="phone"
                   type="text"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
                   className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
                 />
               </div>
@@ -162,7 +232,12 @@ export default function ContactFormSection() {
                 Service Needed
               </label>
 
-              <select className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]">
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
+              >
                 <option>Interior Painting</option>
                 <option>Exterior Painting</option>
                 <option>Deck Painting & Staining</option>
@@ -177,17 +252,27 @@ export default function ContactFormSection() {
               </label>
 
               <textarea
+                name="details"
                 rows={6}
+                value={formData.details}
+                onChange={handleChange}
                 className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full rounded-xl bg-[#8B2E35] px-8 py-5 text-sm font-bold text-white transition hover:bg-[#D35B66]"
+              disabled={isSubmitting}
+              className="w-full rounded-xl bg-[#8B2E35] px-8 py-5 text-sm font-bold text-white transition hover:bg-[#D35B66] disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Submit Request
+              {isSubmitting ? "Sending..." : "Submit Request"}
             </button>
+
+            {message && (
+              <p className="text-center text-sm font-semibold text-[#152536]/70">
+                {message}
+              </p>
+            )}
           </form>
         </motion.div>
       </div>

@@ -8,7 +8,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rjpainting.ca"),
+  metadataBase: new URL("https://rj-painting-zeta.vercel.app/"),
 
   title: {
     default:

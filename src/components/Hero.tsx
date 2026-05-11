@@ -17,7 +17,7 @@ export default function Hero() {
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
         transition={{ duration: 2.2, ease: "easeOut" }}
-        className="absolute inset-0 bg-[url('/images/rj-hero.jpg')] bg-cover bg-center"
+        className="absolute inset-0 bg-[url('/images/rj-hero.png')] bg-cover bg-center"
       />
 
       <div className="absolute inset-0 bg-gradient-to-r from-[#152536] via-[#152536]/85 to-[#152536]/35" />
