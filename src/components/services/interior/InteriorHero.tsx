@@ -36,7 +36,7 @@ export default function InteriorHero() {
             className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
           >
             Premium Interior Painting For{" "}
-            <span className="text-[#D35B66]">Beautiful Residential Spaces</span>
+            <span className="text-[#8B2E35]">Beautiful Residential Spaces</span>
           </motion.h1>
 
           <motion.p
@@ -84,7 +84,7 @@ export default function InteriorHero() {
                   key={item}
                   className="flex items-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm font-semibold text-white backdrop-blur"
                 >
-                  <CheckCircle size={17} className="text-[#D35B66]" />
+                  <CheckCircle size={17} className="text-[#8B2E35]" />
                   {item}
                 </div>
               )

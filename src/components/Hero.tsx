@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6 pb-16 pt-48 sm:pt-44 lg:px-6 lg:pt-40">
         <div className="grid w-full items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="max-w-3xl">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
@@ -34,7 +34,7 @@ export default function Hero() {
             >
               <Star size={16} className="fill-white" />
               Premium Residential Painting
-            </motion.div>
+            </motion.div> */}
 
             <motion.h1
               initial={{ opacity: 0, y: 34 }}
@@ -43,7 +43,7 @@ export default function Hero() {
               className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
             >
               Transform Your Home With{" "}
-              <span className="text-[#D35B66]">Professional Painting</span>
+              <span className="text-[#8B2E35]">Professional Painting</span>
             </motion.h1>
 
             <motion.p
@@ -52,9 +52,11 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.25 }}
               className="mt-6 max-w-2xl text-base leading-8 text-white/82 sm:text-lg"
             >
-              Interior, exterior, deck, trim, and plastering services backed by
-              over 28 years of hands-on residential painting experience in
-              Montreal’s West Island.
+              Here at RJ Painting, I don't claim to paint mansions or large companies or take jobs that cost tens of thousands of dollars. I specialize mostly in everyday West Island residential homes.
+
+I feel that when taking on too many different projects, like commercial and industrial, the quality level that a home should receive is lost. I know when I hire a company to do work with regard to my home, I expect them to treat the job like it was their own home.
+
+That's what RJ Painting brings to you. I have been in this business for 28 years and RJ Painting has been around for over 20 years.
             </motion.p>
 
             <motion.div
@@ -105,7 +107,7 @@ export default function Hero() {
                   }}
                   className="flex items-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm font-semibold text-white backdrop-blur"
                 >
-                  <CheckCircle size={17} className="text-[#D35B66]" />
+                  <CheckCircle size={17} className="text-[#8B2E35]" />
                   {item}
                 </motion.div>
               ))}

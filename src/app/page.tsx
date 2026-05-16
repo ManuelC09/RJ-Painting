@@ -8,6 +8,8 @@ import Testimonials from "@/components/Testimonials";
 import ServiceAreas from "@/components/ServiceAreas";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReviews";
+import ProductBrands from "@/components/ProductBrands";
 
 export default function Home() {
   return (
@@ -18,7 +20,9 @@ export default function Home() {
       <ServicesPreview />
       <RecentProjects />
       <ProcessSection />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <GoogleReviews />
+      <ProductBrands />
       <ServiceAreas />
       <FinalCTA />
       <Footer />

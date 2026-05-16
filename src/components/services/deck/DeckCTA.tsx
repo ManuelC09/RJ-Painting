@@ -19,7 +19,7 @@ export default function DeckCTA() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(38,62,90,0.8),transparent_40%)]" />
 
           <div className="relative mx-auto max-w-4xl">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#D35B66]">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#8B2E35]">
               Ready To Restore Your Deck?
             </p>
 

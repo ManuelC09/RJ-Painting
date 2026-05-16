@@ -36,7 +36,7 @@ export default function DeckHero() {
             className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
           >
             Restore & Protect Your{" "}
-            <span className="text-[#D35B66]">Outdoor Wood Surfaces</span>
+            <span className="text-[#8B2E35]">Outdoor Wood Surfaces</span>
           </motion.h1>
 
           <motion.p
@@ -84,7 +84,7 @@ export default function DeckHero() {
                   key={item}
                   className="flex items-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-3 text-sm font-semibold text-white backdrop-blur"
                 >
-                  <CheckCircle size={17} className="text-[#D35B66]" />
+                  <CheckCircle size={17} className="text-[#8B2E35]" />
                   {item}
                 </div>
               )

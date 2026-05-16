@@ -46,7 +46,7 @@ export default function AboutExperience() {
               key={stat.label}
               className="rounded-[2rem] border border-white/10 bg-white/5 p-10 text-center backdrop-blur"
             >
-              <h3 className="text-5xl font-extrabold text-[#D35B66]">
+              <h3 className="text-5xl font-extrabold text-[#8B2E35]">
                 {stat.number}
               </h3>
 

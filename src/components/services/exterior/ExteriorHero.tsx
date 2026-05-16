@@ -40,7 +40,7 @@ export default function ExteriorHero() {
             className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
           >
             Protect & Transform Your{" "}
-            <span className="text-[#D35B66]">
+            <span className="text-[#8B2E35]">
               Home’s Exterior
             </span>
           </motion.h1>
@@ -99,7 +99,7 @@ export default function ExteriorHero() {
               >
                 <CheckCircle
                   size={17}
-                  className="text-[#D35B66]"
+                  className="text-[#8B2E35]"
                 />
 
                 {item}

@@ -38,7 +38,7 @@ export default function AboutHero() {
             className="mt-6 max-w-5xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl"
           >
             Residential Painting Built On{" "}
-            <span className="text-[#D35B66]">Experience & Detail</span>
+            <span className="text-[#8B2E35]">Experience & Detail</span>
           </motion.h1>
 
           <motion.p

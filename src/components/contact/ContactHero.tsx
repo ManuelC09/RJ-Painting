@@ -23,7 +23,7 @@ export default function ContactHero() {
 
           <motion.h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
             Let’s Transform Your{" "}
-            <span className="text-[#D35B66]">Home</span>
+            <span className="text-[#8B2E35]">Home</span>
           </motion.h1>
 
           <motion.p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">

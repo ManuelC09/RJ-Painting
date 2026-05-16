@@ -25,7 +25,7 @@ export default function GalleryHero() {
 
           <motion.h1 className="max-w-4xl text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
             Recent Residential Painting{" "}
-            <span className="text-[#D35B66]">Transformations</span>
+            <span className="text-[#8B2E35]">Transformations</span>
           </motion.h1>
 
           <motion.p className="mt-6 max-w-2xl text-base leading-8 text-white/82 sm:text-lg">

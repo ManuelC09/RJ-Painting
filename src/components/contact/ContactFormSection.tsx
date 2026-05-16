@@ -11,6 +11,7 @@ export default function ContactFormSection() {
     email: "",
     phone: "",
     service: "Interior Painting",
+    otherService: "",
     details: "",
   });
 
@@ -59,6 +60,7 @@ export default function ContactFormSection() {
         email: "",
         phone: "",
         service: "Interior Painting",
+        otherService: "",
         details: "",
       });
     } catch (error) {
@@ -243,8 +245,26 @@ export default function ContactFormSection() {
                 <option>Deck Painting & Staining</option>
                 <option>Plastering & Surface Repairs</option>
                 <option>Mouldings & Trim Finishing</option>
+                <option>Other</option>
               </select>
             </div>
+
+            {formData.service === "Other" && (
+              <div>
+                <label className="mb-2 block text-sm font-bold text-[#152536]">
+                  Please tell us what you need
+                </label>
+
+                <input
+                  name="otherService"
+                  type="text"
+                  value={formData.otherService}
+                  onChange={handleChange}
+                  placeholder="Example: wallpaper removal, cabinet painting, garage painting..."
+                  className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
+                />
+              </div>
+            )}
 
             <div>
               <label className="mb-2 block text-sm font-bold text-[#152536]">

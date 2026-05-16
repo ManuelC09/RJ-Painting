@@ -6,11 +6,11 @@ import {
   Mail,
   MapPin,
   Menu,
-  Paintbrush,
   Phone,
   X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 
 const services = [
@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <header className="absolute left-0 top-0 z-50 w-full">
       <div className="hidden bg-[#152536] text-white lg:block">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 text-sm">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-sm">
           <div className="flex items-center gap-8">
             <span className="flex items-center gap-2">
               <MapPin size={16} />
@@ -64,21 +64,17 @@ export default function Navbar() {
         initial={{ y: -24, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="mx-4 mt-4 flex items-center justify-between bg-white px-5 py-4 shadow-2xl sm:mx-6 lg:mx-auto lg:mt-6 lg:max-w-7xl lg:px-6 lg:py-5"
+        className="mx-4 mt-3 flex items-center justify-between bg-white px-5 py-3 shadow-2xl sm:mx-6 lg:mx-auto lg:mt-4 lg:max-w-7xl lg:px-6 lg:py-3"
       >
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#8B2E35] text-white">
-            <Paintbrush size={21} />
-          </div>
-
-          <div className="leading-none">
-            <p className="text-xl font-extrabold tracking-tight text-[#263E5A] sm:text-2xl">
-              RJ<span className="text-[#8B2E35]">Painting</span>
-            </p>
-            <p className="mt-1 text-[10px] font-semibold tracking-[0.24em] text-[#263E5A]/70 sm:text-xs">
-              SINCE 1994
-            </p>
-          </div>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/rj-og-logo.png"
+            alt="RJ Painting Logo"
+            width={140}
+            height={60}
+            priority
+            className="h-[60px] w-auto object-contain sm:h-[68px] lg:h-[72px]"
+          />
         </Link>
 
         <div className="hidden items-center gap-8 text-sm font-semibold text-[#152536] lg:flex">
@@ -126,7 +122,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="rounded-md bg-[#8B2E35] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#263E5A]"
+            className="rounded-md bg-[#8B2E35] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#263E5A]"
           >
             Request Estimate
           </Link>
@@ -134,7 +130,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F8F5F0] text-[#152536] lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F8F5F0] text-[#152536] lg:hidden"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}
@@ -214,7 +210,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="block rounded-md bg-[#8B2E35] px-6 py-4 text-center font-bold text-white"
+                  className="block rounded-md bg-[#8B2E35] px-6 py-3 text-center font-bold text-white"
                 >
                   Request Estimate
                 </Link>

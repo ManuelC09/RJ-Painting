@@ -45,7 +45,7 @@ export default function RecentProjects() {
 
             <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
               See The Difference{" "}
-              <span className="text-[#D35B66]">Professional Painting Makes.</span>
+              <span className="text-[#8B2E35]">Professional Painting Makes.</span>
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-white/70">
@@ -140,7 +140,7 @@ export default function RecentProjects() {
             <div>
               <div className="flex items-center gap-3">
                 <p className="text-5xl font-extrabold text-white">100%</p>
-                <Sparkles className="text-[#D35B66]" size={34} />
+                <Sparkles className="text-[#8B2E35]" size={34} />
               </div>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
                 Attention To Detail
