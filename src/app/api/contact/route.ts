@@ -25,14 +25,14 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const firstName = String(body.firstName || "").trim();
-    const lastName = String(body.lastName || "").trim();
+    const name = String(body.name || "").trim();
+    // const lastName = String(body.lastName || "").trim();
     const email = String(body.email || "").trim();
     const phone = String(body.phone || "").trim();
     const service = String(body.service || "").trim();
     const details = String(body.details || "").trim();
 
-    if (!firstName || !lastName || !email || !phone || !service) {
+    if (!name || !email || !phone || !service) {
       return NextResponse.json(
         { error: "Missing required fields." },
         { status: 400 }
@@ -58,8 +58,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const safeFirstName = escapeHtml(firstName);
-    const safeLastName = escapeHtml(lastName);
+    const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
     const safePhone = escapeHtml(phone);
     const safeService = escapeHtml(service);
@@ -108,7 +107,7 @@ export async function POST(req: Request) {
                                 Name
                             </div>
                             <div style="margin-top:5px; font-size:16px; color:#152536;">
-                                ${safeFirstName} ${safeLastName}
+                                ${safeName}
                             </div>
                             </td>
                         </tr>

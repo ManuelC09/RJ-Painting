@@ -77,10 +77,10 @@ That's what RJ Painting brings to you. I have been in this business for 28 years
               </Link>
 
               <Link
-                href="/gallery"
+                href="#reviews"
                 className="inline-flex items-center justify-center rounded-md border border-white/25 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-[#152536]"
               >
-                View Recent Projects
+                Check Google Reviews
               </Link>
             </motion.div>
 

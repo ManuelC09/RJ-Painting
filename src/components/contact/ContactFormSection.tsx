@@ -6,8 +6,7 @@ import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     phone: "",
     service: "Interior Painting",
@@ -32,44 +31,50 @@ export default function ContactFormSection() {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    setIsSubmitting(true);
-    setMessage("");
+  setIsSubmitting(true);
+  setMessage("");
 
-    try {
-      console.log("Submitting form:", formData);
-
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to send request");
-      }
-
-      setMessage("Your request has been submitted successfully.");
-
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        service: "Interior Painting",
-        otherService: "",
-        details: "",
-      });
-    } catch (error) {
-      console.error(error);
-      setMessage("Something went wrong. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+  const dataToSubmit = {
+    ...formData,
+    service: formData.service === "Other" ? formData.otherService : formData.service,
   };
+
+  delete (dataToSubmit as any).otherService;
+
+  try {
+    console.log("Submitting form:", dataToSubmit);
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(dataToSubmit),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to send request");
+    }
+
+    setMessage("Your request has been submitted successfully.");
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      service: "Interior Painting",
+      otherService: "",
+      details: "",
+    });
+  } catch (error) {
+    console.error(error);
+    setMessage("Something went wrong. Please try again.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <section className="relative overflow-hidden bg-[#F8F5F0] py-28">
@@ -165,36 +170,22 @@ export default function ContactFormSection() {
           className="rounded-[2rem] bg-white p-8 shadow-2xl sm:p-10"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-1">
               <div>
                 <label className="mb-2 block text-sm font-bold text-[#152536]">
-                  First Name
+                  First and Last Name
                 </label>
 
                 <input
-                  name="firstName"
+                  name="name"
                   type="text"
-                  value={formData.firstName}
+                  value={formData.name}
                   onChange={handleChange}
                   required
                   className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
                 />
               </div>
 
-              <div>
-                <label className="mb-2 block text-sm font-bold text-[#152536]">
-                  Last Name
-                </label>
-
-                <input
-                  name="lastName"
-                  type="text"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  required
-                  className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
-                />
-              </div>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">

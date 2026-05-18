@@ -68,7 +68,7 @@ const googleReviews = [
 
 export default function GoogleReviews() {
   return (
-    <section className="relative overflow-hidden bg-white py-28">
+    <section className="relative overflow-hidden bg-white py-28" id="reviews">
       <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#8B2E35]/5 blur-3xl" />
       <div className="absolute left-0 bottom-0 h-80 w-80 rounded-full bg-[#263E5A]/5 blur-3xl" />
 

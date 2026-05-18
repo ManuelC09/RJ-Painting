@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MessageCircle} from "lucide-react";
 
 export default function ContactHero() {
   return (
@@ -39,6 +39,14 @@ export default function ContactHero() {
             >
               <Phone size={18} />
               Call Now
+            </a>
+
+            <a
+              href="sms:5146304638"
+              className="inline-flex items-center gap-3 rounded-md border border-white/20 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-[#152536]"
+            >
+              <MessageCircle size={18} />
+              Text Us
             </a>
 
             <a
