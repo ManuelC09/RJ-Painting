@@ -342,7 +342,13 @@ const categories = [
 ];
 
 export default function GalleryGrid() {
-  const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const [selectedImage, setSelectedImage] = useState<any>(null);
+  const [activeCategory, setActiveCategory] = useState("All Projects");
+
+  const filteredItems =
+    activeCategory === "All Projects"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
     <section className="relative overflow-hidden bg-[#F8F5F0] py-28">
@@ -372,60 +378,78 @@ export default function GalleryGrid() {
         </motion.div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {categories.map((category) => (
-            <span
-              key={category}
-              className="rounded-full border border-[#152536]/10 bg-white px-5 py-3 text-sm font-semibold text-[#152536]/70 shadow-sm"
-            >
-              {category}
-            </span>
-          ))}
+          {categories.map((category) => {
+            const isActive = activeCategory === category;
+
+            return (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`rounded-full border px-5 py-3 text-sm font-semibold shadow-sm transition duration-300 ${
+                  isActive
+                    ? "border-[#8B2E35] bg-[#8B2E35] text-white shadow-md"
+                    : "border-[#152536]/10 bg-white text-[#152536]/70 hover:border-[#8B2E35]/30 hover:text-[#8B2E35]"
+                }`}
+              >
+                {category}
+              </button>
+            );
+          })}
         </div>
 
-        <div className="mt-16 grid auto-rows-[260px] grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {galleryItems.map((item, index) => (
-            <motion.div
-              key={`${item.image}-${index}`}
-              initial={{ opacity: 0, y: 35 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: index * 0.04 }}
-              viewport={{ once: true }}
-              onClick={() => setSelectedImage(item)}
-             className={`group relative cursor-pointer overflow-hidden rounded-[1.75rem] bg-white shadow-lg transition duration-500 hover:-translate-y-1 hover:shadow-2xl ${
-              item.large ? "md:col-span-2 md:row-span-2" : "row-span-1"
-            }`}
-            >
-              <div className="relative h-full overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title || item.category}
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -18 }}
+            transition={{ duration: 0.35 }}
+            className="mt-16 grid auto-rows-[260px] grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+          >
+            {filteredItems.map((item, index) => (
+              <motion.div
+                key={`${item.image}-${index}`}
+                initial={{ opacity: 0, y: 35 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: index * 0.04 }}
+                viewport={{ once: true }}
+                onClick={() => setSelectedImage(item)}
+                className={`group relative cursor-pointer overflow-hidden rounded-[1.75rem] bg-white shadow-lg transition duration-500 hover:-translate-y-1 hover:shadow-2xl ${
+                  item.large ? "md:col-span-2 md:row-span-2" : "row-span-1"
+                }`}
+              >
+                <div className="relative h-full overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title || item.category}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
 
-                <div className="absolute left-5 top-5 rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur">
-                  {item.category}
-                </div>
+                  <div className="absolute left-5 top-5 rounded-full bg-white/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md">
+                    {item.category}
+                  </div>
 
-                <div className="absolute bottom-0 left-0 w-full p-7">
-                  {item.title && (
-                    <h3 className="max-w-xl text-3xl font-extrabold leading-tight text-white">
-                      {item.title}
-                    </h3>
-                  )}
+                  <div className="absolute bottom-0 left-0 w-full p-6">
+                    {item.title && (
+                      <h3 className="max-w-xl text-2xl font-extrabold leading-tight text-white">
+                        {item.title}
+                      </h3>
+                    )}
 
-                  <div className="mt-4 flex items-center gap-3">
-                    <span className="h-[2px] w-10 bg-[#D35B66]" />
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
-                      RJ Painting
-                    </p>
+                    <div className="mt-4 flex items-center gap-3">
+                      <span className="h-[2px] w-10 bg-[#D35B66]" />
+                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75">
+                        RJ Painting
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       <AnimatePresence>
