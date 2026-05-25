@@ -1,82 +1,335 @@
 "use client";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import { motion } from "framer-motion";
+type GalleryItem = {
+  title?: string;
+  category: string;
+  image: string;
+  large?: boolean;
+};
 
-const galleryItems = [
+const galleryItems: GalleryItem[] = [
+
   {
-    title: "Modern Living Room Refresh",
+    title: " ",
     category: "Interior Painting",
-    image: "/images/interior-gallery-1.png",
-    large: true,
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681240/10_l52qq7.png",
+    large: false,
   },
+
   {
-    title: "Bright Kitchen Repaint",
+    title: " ",
     category: "Interior Painting",
-    image: "/images/interior-gallery-2.png",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681239/9_nletbm.png",
+    large: false,
   },
+
+
   {
-    title: "Residential Staircase Transformation",
+    title: " ",
     category: "Interior Painting",
-    image: "/images/interior-gallery-3.png",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681238/8_kmvbb2.png",
+    large: false,
   },
+
+
   {
-    title: "Clean Bedroom Finish",
+    title: " ",
     category: "Interior Painting",
-    image: "/images/interior-gallery-4.png",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681237/7_scugvh.png",
+    large: false,
   },
+
+
   {
-    title: "Modern Exterior Repaint",
+    title: " ",
+    category: "Interior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681236/6_wyaagx.png",
+    large: false,
+  },
+
+
+  {
+    title: " ",
+    category: "Interior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681236/5_dspj1d.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Interior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681235/3_e2q0j9.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Interior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681235/4_nvig6v.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Interior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681234/1_n9gh8o.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Interior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681234/2_rbhetk.png",
+    large: false,
+  },
+
+  {
+    title: " ",
     category: "Exterior Painting",
-    image: "/images/exterior-gallery-1.png",
-    large: true,
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681566/8_rujb5v.png",
+    large: false,
   },
+
   {
-    title: "Contemporary Brick Refresh",
+    title: " ",
     category: "Exterior Painting",
-    image: "/images/exterior-gallery-2.png",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681564/5_pl19ci.png",
+    large: false,
   },
+
   {
-    title: "Luxury Curb Appeal Upgrade",
+    title: " ",
     category: "Exterior Painting",
-    image: "/images/exterior-gallery-3.png",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681563/6_tknec8.png",
+    large: false,
   },
+
   {
-    title: "Garage & Trim Finish",
+    title: " ",
     category: "Exterior Painting",
-    image: "/images/exterior-gallery-4.jpg",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681561/7_wgd7un.png",
+    large: false,
   },
+
   {
-    title: "Backyard Deck Restoration",
+    title: " ",
+    category: "Exterior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681561/4_sjcyqo.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Exterior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681561/3_ss3ook.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Exterior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681559/2_fetpuo.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Exterior Painting",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681558/1_hm8mbo.png",
+    large: false,
+  },
+
+  {
+    title: " ",
     category: "Deck Staining",
-    image: "/images/deck-gallery-1.png",
-    large: true,
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681410/10_xiixlq.png",
+    large: false,
   },
+
   {
-    title: "Outdoor Wood Refresh",
+    title: " ",
     category: "Deck Staining",
-    image: "/images/deck-gallery-2.png",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681409/9_kgh7hf.png",
+    large: false,
   },
+
   {
-    title: "Fence Staining Project",
+    title: " ",
     category: "Deck Staining",
-    image: "/images/deck-gallery-3.png",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681406/8_ix6heq.png",
+    large: false,
   },
+
   {
-    title: "Clean Patio Deck Finish",
+    title: " ",
     category: "Deck Staining",
-    image: "/images/deck-gallery-4.png",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681405/6_lokxc9.png",
+    large: false,
   },
+
   {
-    title: "Detailed Trim Finishing",
-    category: "Trim & Mouldings",
-    image: "/images/project-4.png",
-    large: true,
+    title: " ",
+    category: "Deck Staining",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681405/7_vlwg35.png",
+    large: false,
   },
+
   {
-    title: "Surface Preparation",
+    title: " ",
+    category: "Deck Staining",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681404/5_tgdd9t.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Deck Staining",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681383/4_kvtahb.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Deck Staining",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681370/3_fpkqho.jpg",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Deck Staining",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681369/2_xfz4ux.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Deck Staining",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681368/1_vgvh5y.png",
+    large: false,
+  },
+
+  {
+    title: " ",
     category: "Plastering & Repairs",
-    image: "/images/rj-about.png",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680952/8_brnukq.png",
+    large: false,
   },
+
+  {
+    title: " ",
+    category: "Plastering & Repairs",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680992/9_rkcfew.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Plastering & Repairs",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680993/10_sjcnud.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Plastering & Repairs",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680951/3_pqlxlu.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Plastering & Repairs",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680951/7_atuxcn.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Plastering & Repairs",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680951/4_kz5eif.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Plastering & Repairs",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680949/5_l4cr0b.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Plastering & Repairs",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680948/6_pj817g.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Plastering & Repairs",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680948/2_fiwwdf.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Plastering & Repairs",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680946/1_hdlstn.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Trim & Mouldings",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680302/8_gjq7op.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Trim & Mouldings",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680302/9_rpo3kj.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Trim & Mouldings",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680302/10_ghu4jw.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Trim & Mouldings",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680271/5_jmsmwd.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Trim & Mouldings",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680270/3_aihsk6.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Trim & Mouldings",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680270/4_qvm6dd.png",
+    large: false,
+  },
+
+  {
+    title: " ",
+    category: "Trim & Mouldings",
+    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680268/2_zaaqco.png",
+    large: false,
+  },
+
 ];
 
 const categories = [
@@ -89,6 +342,8 @@ const categories = [
 ];
 
 export default function GalleryGrid() {
+  const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+
   return (
     <section className="relative overflow-hidden bg-[#F8F5F0] py-28">
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-[#8B2E35]/5 blur-3xl" />
@@ -127,22 +382,23 @@ export default function GalleryGrid() {
           ))}
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid auto-rows-[260px] grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {galleryItems.map((item, index) => (
             <motion.div
-              key={`${item.title}-${index}`}
+              key={`${item.image}-${index}`}
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: index * 0.04 }}
               viewport={{ once: true }}
-              className={`group relative overflow-hidden rounded-[2rem] shadow-xl ${
-                item.large ? "lg:col-span-2" : ""
-              }`}
+              onClick={() => setSelectedImage(item)}
+             className={`group relative cursor-pointer overflow-hidden rounded-[1.75rem] bg-white shadow-lg transition duration-500 hover:-translate-y-1 hover:shadow-2xl ${
+              item.large ? "md:col-span-2 md:row-span-2" : "row-span-1"
+            }`}
             >
-              <div className="relative h-[420px] overflow-hidden">
+              <div className="relative h-full overflow-hidden">
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={item.title || item.category}
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                 />
 
@@ -153,9 +409,11 @@ export default function GalleryGrid() {
                 </div>
 
                 <div className="absolute bottom-0 left-0 w-full p-7">
-                  <h3 className="max-w-xl text-3xl font-extrabold leading-tight text-white">
-                    {item.title}
-                  </h3>
+                  {item.title && (
+                    <h3 className="max-w-xl text-3xl font-extrabold leading-tight text-white">
+                      {item.title}
+                    </h3>
+                  )}
 
                   <div className="mt-4 flex items-center gap-3">
                     <span className="h-[2px] w-10 bg-[#D35B66]" />
@@ -169,6 +427,53 @@ export default function GalleryGrid() {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 px-4 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              className="relative w-full max-w-6xl overflow-hidden rounded-[2rem] bg-white shadow-2xl"
+              initial={{ scale: 0.92, opacity: 0, y: 30 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.92, opacity: 0, y: 30 }}
+              transition={{ duration: 0.25 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute right-5 top-5 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-2xl font-light text-white backdrop-blur transition hover:bg-black"
+                aria-label="Close image"
+              >
+                ×
+              </button>
+
+              <img
+                src={selectedImage.image}
+                alt={selectedImage.title || selectedImage.category}
+                className="max-h-[85vh] w-full bg-black object-contain"
+              />
+
+              <div className="bg-white p-6">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#8B2E35]">
+                  {selectedImage.category}
+                </p>
+
+                {selectedImage.title && (
+                  <h3 className="mt-2 text-2xl font-extrabold text-[#152536]">
+                    {selectedImage.title}
+                  </h3>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
