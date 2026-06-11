@@ -24,7 +24,7 @@ export default function FinalCTA() {
             </p>
 
             <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Professional Residential Painting Backed By 28+ Years Of
+              Professional Residential Painting Backed By 36+ Years Of
               Experience
             </h2>
 

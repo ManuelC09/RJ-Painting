@@ -111,7 +111,7 @@ export default function ServiceAreas() {
                 <div className="mt-10 grid gap-5 sm:grid-cols-2">
                   <div className="rounded-2xl bg-white p-6 shadow-sm">
                     <p className="text-4xl font-extrabold text-[#8B2E35]">
-                      28+
+                      36+
                     </p>
 
                     <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#152536]/60">

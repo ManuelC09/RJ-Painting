@@ -77,7 +77,7 @@ export default function ContactFormSection() {
 };
 
   return (
-    <section className="relative overflow-hidden bg-[#F8F5F0] py-28">
+    <section className="relative overflow-hidden bg-[#F8F5F0] py-28" id="contact">
       <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-[#8B2E35]/5 blur-3xl" />
       <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-[#263E5A]/5 blur-3xl" />
 
@@ -173,7 +173,7 @@ export default function ContactFormSection() {
             <div className="grid gap-6 md:grid-cols-1">
               <div>
                 <label className="mb-2 block text-sm font-bold text-[#152536]">
-                  First and Last Name
+                  Full Name
                 </label>
 
                 <input

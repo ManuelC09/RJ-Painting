@@ -124,16 +124,16 @@ export default function RecentProjects() {
         >
           <div className="grid gap-10 md:grid-cols-3">
             <div>
-              <p className="text-5xl font-extrabold text-white">28+</p>
+              <p className="text-5xl font-extrabold text-white">36+</p>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
                 Years Experience
               </p>
             </div>
 
             <div>
-              <p className="text-5xl font-extrabold text-white">100+</p>
+              <p className="text-5xl font-extrabold text-white">1000+</p>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
-                Residential Projects
+                Projects Completed
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export default function RecentProjects() {
                 <Sparkles className="text-[#8B2E35]" size={34} />
               </div>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
-                Attention To Detail
+                Residential Focus
               </p>
             </div>
           </div>

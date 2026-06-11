@@ -63,7 +63,7 @@ export default function ProcessSection() {
 
           <p className="mt-6 text-lg leading-8 text-[#152536]/70">
             Every project follows a structured process focused on preparation,
-            professionalism, attention to detail, and homeowner satisfaction.
+            professionalism, Residential Focus, and homeowner satisfaction.
           </p>
         </motion.div>
 

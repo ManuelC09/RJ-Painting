@@ -29,7 +29,7 @@ const values = [
   },
   {
     icon: BadgeCheck,
-    title: "28+ Years Experience",
+    title: "36+ Years Experience",
     description:
       "Trusted residential painting experience throughout Montreal’s West Island.",
   },

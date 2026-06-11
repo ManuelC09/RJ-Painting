@@ -41,7 +41,7 @@ export default function InteriorIntro() {
             <p className="mt-6 text-base leading-8 text-[#152536]/70">
               Whether you’re repainting a single room or completing a full-home
               transformation, every project is approached with careful
-              preparation, attention to detail, and respect for your home.
+              preparation, Residential Focus, and respect for your home.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">

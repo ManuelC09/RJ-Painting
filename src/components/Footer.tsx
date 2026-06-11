@@ -43,7 +43,7 @@ export default function Footer() {
           <p className="mt-6 max-w-sm text-sm leading-7 text-white/65">
             Professional residential painting services throughout Montreal’s
             West Island backed by over 28 years of experience, clean
-            workmanship, and attention to detail.
+            workmanship, and Residential Focus.
           </p>
         </div>
 

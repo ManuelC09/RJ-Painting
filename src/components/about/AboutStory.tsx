@@ -33,7 +33,7 @@ export default function AboutStory() {
 
           <p className="mt-6 text-base leading-8 text-[#152536]/70">
             Over the years, we’ve built our reputation through reliability,
-            attention to detail, and a commitment to helping homeowners create
+            Residential Focus, and a commitment to helping homeowners create
             cleaner, brighter, and more modern living spaces.
           </p>
 

@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import { motion } from "framer-motion";
 
 const stats = [
-  "28+ Years Experience",
+  "36+ Years Experience",
   "West Island Local Business",
   "Free Estimates",
 ];
@@ -137,7 +137,7 @@ That's what RJ Painting brings to you. I have been in this business for 28 years
                 </p>
 
                 <div className="mt-6 rounded-2xl bg-[#F8F5F0] p-5">
-                  <p className="text-4xl font-extrabold text-[#263E5A]">28+</p>
+                  <p className="text-4xl font-extrabold text-[#263E5A]">36+</p>
                   <p className="mt-1 text-sm font-semibold text-[#152536]/70">
                     Years of residential painting experience
                   </p>

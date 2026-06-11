@@ -40,6 +40,15 @@ export default function Navbar() {
             <Mail size={15} />
             contact@rjpainting.ca
           </a>
+
+          <a
+            href="tel:+15146304638"
+            className="flex items-center gap-2 text-white/85 transition hover:text-white"
+          >
+            <Phone size={15} />
+            Richard: (514) 630-4638
+          </a>
+
         </div>
 
         <div className="flex items-center gap-7 font-medium">
@@ -49,7 +58,7 @@ export default function Navbar() {
           <Link href="/about" className="text-white/85 transition hover:text-white">
             About
           </Link>
-          <Link href="/contact" className="text-white/85 transition hover:text-white">
+          <Link href="/contact#contact" className="text-white/85 transition hover:text-white">
             Contact
           </Link>
         </div>
@@ -118,7 +127,7 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/contact"
+            href="/contact#contact"
             className="rounded-full px-4 py-2.5 transition hover:bg-white hover:text-[#8B2E35] hover:shadow-sm"
           >
             Contact
@@ -137,10 +146,10 @@ export default function Navbar() {
           </a>
 
           <Link
-            href="/contact"
+            href="/products"
             className="rounded-full bg-[#8B2E35] px-6 py-4 text-sm font-extrabold text-white shadow-[0_14px_35px_rgba(139,46,53,0.28)] transition hover:-translate-y-0.5 hover:bg-[#263E5A] hover:shadow-[0_18px_45px_rgba(38,62,90,0.25)]"
           >
-            Request Estimate
+            Products We Use
           </Link>
         </div>
 
@@ -223,7 +232,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                href="/contact"
+                href="/contact#contact"
                 onClick={() => setIsOpen(false)}
                 className="rounded-xl px-4 py-3 transition hover:bg-[#F8F5F0]"
               >
@@ -242,7 +251,7 @@ export default function Navbar() {
                 </a>
 
                 <Link
-                  href="/contact"
+                  href="/contact#contact"
                   onClick={() => setIsOpen(false)}
                   className="block rounded-full bg-[#8B2E35] px-6 py-4 text-center font-extrabold text-white shadow-[0_14px_35px_rgba(139,46,53,0.25)]"
                 >

@@ -45,7 +45,7 @@ export default function ContactTrust() {
           </div>
 
           <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
-            Professional Residential Painting With Attention To Detail
+            Professional Residential Painting With Residential Focus
           </h2>
         </motion.div>
 

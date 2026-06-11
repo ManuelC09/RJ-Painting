@@ -29,7 +29,7 @@ const features = [
   },
   {
     icon: Brush,
-    title: "Attention To Detail",
+    title: "Residential Focus",
     description:
       "Professional workmanship focused on refined finishes and clean execution.",
   },
@@ -136,7 +136,7 @@ export default function TrustIntro() {
                   </p>
 
                   <h3 className="mt-3 text-3xl font-extrabold text-[#152536]">
-                    28+ Years
+                    36+ Years
                   </h3>
 
                   <p className="mt-2 text-sm leading-7 text-[#152536]/70">
