@@ -245,7 +245,7 @@ export default function GoogleReviews() {
               </a>
             </div>
 
-            <div className="h-[420px] w-full border-t border-slate-200 lg:border-l lg:border-t-0">
+            <div className="h-[240px] w-full border-t border-slate-200 sm:h-[300px] md:h-[360px] lg:h-[420px] lg:border-l lg:border-t-0">
               {/* <iframe
                 src="https://www.google.com/maps?q=R%20J%20Painting%20Montreal%20West%20Island&output=embed"
                 width="100%"
@@ -256,7 +256,7 @@ export default function GoogleReviews() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="RJ Painting Google Maps Location"
               /> */}
-              <img src="/images/map.jpg" alt="Map of RJ Painting location" className="h-full w-full object-cover" />
+              <img src="/images/map.jpg" alt="Map of RJ Painting location" className="h-full w-full object-cover object-center" />
             </div>
           </div>
         </motion.div>

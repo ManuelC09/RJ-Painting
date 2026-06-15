@@ -112,7 +112,7 @@ export default function ContactFormSection() {
                   Phone Number
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">(514) 630-4638</p>
+                <p className="mt-1 text-[#152536]/70">Richard (514) 630-4638</p>
               </div>
             </div>
 
@@ -140,9 +140,11 @@ export default function ContactFormSection() {
                   Service Area
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">
-                  Montreal’s West Island
-                </p>
+                <p className="mt-1 text-[#152536]/70">Saint-Lazare</p>
+                <p className="mt-1 text-[#152536]/70">Senneville</p>
+                <p className="mt-1 text-[#152536]/70">Hudson</p>
+                <p className="mt-1 text-[#152536]/70">Pincourte</p>
+                <p className="mt-1 text-[#152536]/70">L’Île-Perrot</p>
               </div>
             </div>
 

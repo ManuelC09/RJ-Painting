@@ -13,6 +13,11 @@ const areas = [
   "Baie-D’Urfé",
   "Sainte-Anne-de-Bellevue",
   "Vaudreuil",
+  "Saint-Lazare",
+  "Senneville",
+  "Hudson",
+  "Pincourte",
+  "L’Île-Perrot",
 ];
 
 export default function ServiceAreas() {
