@@ -179,13 +179,6 @@ const galleryItems: GalleryItem[] = [
   {
     title: " ",
     category: "Deck Staining",
-    image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681404/5_tgdd9t.png",
-    large: false,
-  },
-
-  {
-    title: " ",
-    category: "Deck Staining",
     image: "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681383/4_kvtahb.png",
     large: false,
   },

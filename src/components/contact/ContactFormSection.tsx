@@ -172,7 +172,7 @@ export default function ContactFormSection() {
             <div className="grid gap-6 md:grid-cols-1">
               <div>
                 <label className="mb-2 block text-sm font-bold text-[#152536]">
-                  Full Name
+                  Full Name  <span className="text-red-500">*</span>
                 </label>
 
                 <input
@@ -190,7 +190,7 @@ export default function ContactFormSection() {
             <div className="grid gap-6 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-bold text-[#152536]">
-                  Email Address
+                  Email Address <span className="text-red-500">*</span>
                 </label>
 
                 <input
@@ -205,7 +205,7 @@ export default function ContactFormSection() {
 
               <div>
                 <label className="mb-2 block text-sm font-bold text-[#152536]">
-                  Phone Number
+                  Phone Number <span className="text-red-500">*</span>
                 </label>
 
                 <input
@@ -221,20 +221,22 @@ export default function ContactFormSection() {
 
             <div>
               <label className="mb-2 block text-sm font-bold text-[#152536]">
-                Service Needed
+                Service Needed  <span className="text-red-500">*</span>
               </label>
 
               <select
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
+                required
                 className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
               >
                 <option>Interior Painting</option>
-                <option>Exterior Painting</option>
-                <option>Deck Painting & Staining</option>
                 <option>Plastering & Surface Repairs</option>
                 <option>Mouldings & Trim Finishing</option>
+                <option>Exterior Painting</option>
+                <option>Deck Painting & Staining</option>
+                <option>Deck Cleaning & Protection</option>
                 <option>Other</option>
               </select>
             </div>
@@ -242,16 +244,17 @@ export default function ContactFormSection() {
             {formData.service === "Other" && (
               <div>
                 <label className="mb-2 block text-sm font-bold text-[#152536]">
-                  Please tell us what you need
+                  Please tell us what you need <span className="text-red-500">*</span>
                 </label>
 
                 <input
                   name="otherService"
                   type="text"
+                  required
+                  className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
                   value={formData.otherService}
                   onChange={handleChange}
                   placeholder="Example: wallpaper removal, cabinet painting, garage painting..."
-                  className="w-full rounded-xl border border-[#152536]/10 bg-[#F8F5F0] px-5 py-4 outline-none transition focus:border-[#8B2E35]"
                 />
               </div>
             )}
