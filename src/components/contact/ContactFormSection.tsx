@@ -126,7 +126,7 @@ export default function ContactFormSection() {
                   Email Address
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">info@rjpainting.ca</p>
+                <p className="mt-1 text-[#152536]/70">rjspainting@hotmail.com</p>
               </div>
             </div>
 
@@ -156,7 +156,8 @@ export default function ContactFormSection() {
                   Availability
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">Monday – Saturday</p>
+                <p className="mt-1 text-[#152536]/70">Monday – Friday 8:00 AM – 8:00 PM</p>
+                <p className="mt-1 text-[#152536]/70">Saturday – Sunday 10:00 AM – 4:00 PM</p>
               </div>
             </div>
           </div>

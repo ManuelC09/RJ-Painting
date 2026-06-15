@@ -8,8 +8,6 @@ import { useState } from "react";
 
 const services = [
   { name: "Interior Painting", href: "/services/interior-painting" },
-  { name: "Exterior Painting", href: "/services/exterior-painting" },
-  { name: "Deck Painting & Staining", href: "/services/deck-painting-staining" },
   {
     name: "Plastering & Surface Repairs",
     href: "/services/plastering-surface-repairs",
@@ -18,6 +16,8 @@ const services = [
     name: "Mouldings & Trim Finishing",
     href: "/services/mouldings-trim-finishing",
   },
+  { name: "Exterior Painting", href: "/services/exterior-painting" },
+  { name: "Deck Painting & Staining", href: "/services/deck-painting-staining" },
 ];
 
 export default function Navbar() {
@@ -34,11 +34,11 @@ export default function Navbar() {
           </span>
 
           <a
-            href="mailto:contact@rjpainting.ca"
+            href="mailto:rjspainting@hotmail.com"
             className="flex items-center gap-2 text-white/85 transition hover:text-white"
           >
             <Mail size={15} />
-            contact@rjpainting.ca
+            rjspainting@hotmail.com
           </a>
 
           <a
@@ -251,11 +251,11 @@ export default function Navbar() {
                 </a>
 
                 <Link
-                  href="/contact#contact"
+                  href="/products"
                   onClick={() => setIsOpen(false)}
                   className="block rounded-full bg-[#8B2E35] px-6 py-4 text-center font-extrabold text-white shadow-[0_14px_35px_rgba(139,46,53,0.25)]"
                 >
-                  Request Estimate
+                  Products We Use
                 </Link>
               </div>
             </div>

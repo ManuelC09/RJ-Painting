@@ -10,6 +10,19 @@ const stats = [
   "Free Estimates",
 ];
 
+function GoogleWordmark() {
+  return (
+    <span className="inline-flex items-center text-xl font-bold tracking-[-0.04em]">
+      <span className="text-[#4285F4]">G</span>
+      <span className="text-[#DB4437]">o</span>
+      <span className="text-[#F4B400]">o</span>
+      <span className="text-[#4285F4]">g</span>
+      <span className="text-[#0F9D58]">l</span>
+      <span className="text-[#DB4437]">e</span>
+    </span>
+  );
+}
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#152536]">
@@ -78,9 +91,11 @@ That's what RJ Painting brings to you. I have been in this business for 28 years
 
               <Link
                 href="#reviews"
-                className="inline-flex items-center justify-center rounded-md border border-white/25 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-[#152536]"
+                className="gap-1 inline-flex items-center justify-center rounded-md border border-white/25 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-[#152536]"
               >
-                Check Google Reviews
+                <span>Check</span>
+                <GoogleWordmark />
+                <span>Reviews</span>
               </Link>
             </motion.div>
 

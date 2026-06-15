@@ -98,11 +98,11 @@ export default function Footer() {
             </a>
 
             <a
-              href="mailto:contact@rjpainting.ca"
+              href="mailto:rjspainting@hotmail.com"
               className="flex items-start gap-3 transition hover:text-[#8B2E35]"
             >
               <Mail size={18} className="mt-[2px] shrink-0" />
-              <span>contact@rjpainting.ca</span>
+              <span>rjspainting@hotmail.com</span>
             </a>
 
             <div className="flex items-start gap-3">

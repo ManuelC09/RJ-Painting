@@ -112,7 +112,7 @@ export const sherwinProducts: Product[] = [
     name: "ProMar® 400 Zero VOC Interior Latex Paint",
     description:
       "Professional interior latex paint designed for reliable coverage and a clean finish on interior wall surfaces.",
-    image: "/images/products/sherwin-promar-400.webp",
+    image: "/images/products/sherwin-promar-400.jpeg",
   },
   {
     brand: "Sherwin-Williams",
