@@ -140,11 +140,7 @@ export default function ContactFormSection() {
                   Service Area
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">Saint-Lazare</p>
-                <p className="mt-1 text-[#152536]/70">Senneville</p>
-                <p className="mt-1 text-[#152536]/70">Hudson</p>
-                <p className="mt-1 text-[#152536]/70">Pincourte</p>
-                <p className="mt-1 text-[#152536]/70">L’Île-Perrot</p>
+                <p className="mt-1 text-[#152536]/70">Montreal’s West Island</p>
               </div>
             </div>
 
