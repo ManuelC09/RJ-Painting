@@ -112,7 +112,7 @@ export default function ContactFormSection() {
                   Phone Number
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">Richard (514) 630-4638</p>
+                <p className="mt-1 text-[#152536]/70">Rick (514) 630-4638</p>
               </div>
             </div>
 
@@ -190,7 +190,7 @@ export default function ContactFormSection() {
             <div className="grid gap-6 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-bold text-[#152536]">
-                  Email Address <span className="text-red-500">*</span>
+                  Email Address
                 </label>
 
                 <input
@@ -237,6 +237,7 @@ export default function ContactFormSection() {
                 <option>Exterior Painting</option>
                 <option>Deck Painting & Staining</option>
                 <option>Deck Cleaning & Protection</option>
+                <option>Exterior Brick & Stucco</option>
                 <option>Other</option>
               </select>
             </div>

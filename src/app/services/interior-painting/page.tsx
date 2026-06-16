@@ -6,6 +6,8 @@ import InteriorIntro from "@/components/services/interior/InteriorIntro";
 import InteriorServices from "@/components/services/interior/InteriorServices";
 import InteriorGallery from "@/components/services/interior/InteriorGallery";
 import InteriorCTA from "@/components/services/interior/InteriorCTA";
+import ServiceTestimonial from "@/components/services/ServiceTestimonial";
+import { serviceTestimonials } from "@/data/serviceTestimonials";
 
 export default function InteriorPaintingPage() {
   return (
@@ -15,6 +17,7 @@ export default function InteriorPaintingPage() {
       <InteriorIntro />
       <InteriorServices />
       <InteriorFeatures />
+      <ServiceTestimonial testimonial={serviceTestimonials.interiorPainting} />
       <InteriorGallery />
       <InteriorCTA />
       <Footer />

@@ -18,6 +18,8 @@ const services = [
   },
   { name: "Exterior Painting", href: "/services/exterior-painting" },
   { name: "Deck Painting & Staining", href: "/services/deck-painting-staining" },
+  { name: "Deck Cleaning & Protection", href: "/services/deck-cleaning-protection" },
+  { name: "Exterior Brick & Stucco", href: "/services/exterior-brick-stucco" }
 ];
 
 export default function Navbar() {
@@ -46,7 +48,7 @@ export default function Navbar() {
             className="flex items-center gap-2 text-white/85 transition hover:text-white"
           >
             <Phone size={15} />
-            Richard: (514) 630-4638
+            Rick: (514) 630-4638
           </a>
 
         </div>

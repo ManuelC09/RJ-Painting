@@ -4,7 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  BrickWall,
   Brush,
+  Droplets,
   Hammer,
   Home,
   PaintRoller,
@@ -18,6 +20,7 @@ const services = [
     description:
       "Clean, modern interior painting for living rooms, kitchens, bedrooms, hallways, basements, and full-home repaints.",
     href: "/services/interior-painting",
+    featured: true,
   },
   {
     icon: Home,
@@ -34,6 +37,13 @@ const services = [
     href: "/services/deck-painting-staining",
   },
   {
+    icon: Droplets,
+    title: "Deck Cleaning & Protection",
+    description:
+      "Clean, refresh, and protect outdoor deck surfaces from weather, moisture, dirt, and seasonal wear.",
+    href: "/services/deck-cleaning-protection",
+  },
+  {
     icon: Hammer,
     title: "Plastering & Surface Repairs",
     description:
@@ -46,6 +56,14 @@ const services = [
     description:
       "Detailed finishing for baseboards, crown mouldings, window trim, door frames, and accent trim.",
     href: "/services/mouldings-trim-finishing",
+  },
+  {
+    icon: BrickWall,
+    title: "Exterior Brick & Stucco",
+    description:
+      "Modernize brick and stucco surfaces with professional exterior painting and curb appeal upgrades.",
+    href: "/services/exterior-brick-stucco",
+    featured: true,
   },
 ];
 
@@ -89,11 +107,11 @@ export default function ServicesPreview() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.55,
-                  delay: index * 0.1,
+                  delay: index * 0.08,
                 }}
                 viewport={{ once: true }}
                 className={`group relative overflow-hidden rounded-[2rem] border border-[#152536]/10 bg-[#F8F5F0] p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-2xl ${
-                  index === 0 ? "lg:col-span-2" : ""
+                  service.featured ? "lg:col-span-2" : ""
                 }`}
               >
                 <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#8B2E35]/10 transition duration-500 group-hover:scale-150" />

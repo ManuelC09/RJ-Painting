@@ -6,6 +6,8 @@ import DeckGallery from "@/components/services/deck/DeckGallery";
 import DeckHero from "@/components/services/deck/DeckHero";
 import DeckIntro from "@/components/services/deck/DeckIntro";
 import DeckServices from "@/components/services/deck/DeckServices";
+import ServiceTestimonial from "@/components/services/ServiceTestimonial";
+import { serviceTestimonials } from "@/data/serviceTestimonials";
 
 export default function DeckPaintingStainingPage() {
   return (
@@ -15,6 +17,7 @@ export default function DeckPaintingStainingPage() {
       <DeckIntro />
       <DeckServices />
       <DeckFeatures />
+      <ServiceTestimonial testimonial={serviceTestimonials.deckStaining} />
       <DeckGallery />
       <DeckCTA />
       <Footer />

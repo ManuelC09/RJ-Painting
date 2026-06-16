@@ -6,6 +6,8 @@ import MouldingsGallery from "@/components/services/mouldings/MouldingsGallery";
 import MouldingsHero from "@/components/services/mouldings/MouldingsHero";
 import MouldingsIntro from "@/components/services/mouldings/MouldingsIntro";
 import MouldingsServices from "@/components/services/mouldings/MouldingsServices";
+import ServiceTestimonial from "@/components/services/ServiceTestimonial";
+import { serviceTestimonials } from "@/data/serviceTestimonials";
 
 export default function MouldingsTrimFinishingPage() {
   return (
@@ -15,6 +17,7 @@ export default function MouldingsTrimFinishingPage() {
       <MouldingsIntro />
       <MouldingsServices />
       <MouldingsFeatures />
+      <ServiceTestimonial testimonial={serviceTestimonials.mouldings} />
       <MouldingsGallery />
       <MouldingsCTA />
       <Footer />

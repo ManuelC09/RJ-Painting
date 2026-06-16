@@ -6,6 +6,8 @@ import ExteriorServices from "@/components/services/exterior/ExteriorServices";
 import ExteriorFeatures from "@/components/services/exterior/ExteriorFeatures";
 import ExteriorGallery from "@/components/services/exterior/ExteriorGallery";
 import ExteriorCTA from "@/components/services/exterior/ExteriorCTA";
+import ServiceTestimonial from "@/components/services/ServiceTestimonial";
+import { serviceTestimonials } from "@/data/serviceTestimonials";
 
 export default function InteriorPaintingPage() {
   return (
@@ -15,6 +17,7 @@ export default function InteriorPaintingPage() {
         <ExteriorIntro />
         <ExteriorServices />
         <ExteriorFeatures />
+        <ServiceTestimonial testimonial={serviceTestimonials.exteriorPainting} />
         <ExteriorGallery />
         <ExteriorCTA />
       <Footer />

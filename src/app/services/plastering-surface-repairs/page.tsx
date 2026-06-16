@@ -6,6 +6,8 @@ import PlasteringGallery from "@/components/services/plastering/PlasteringGaller
 import PlasteringHero from "@/components/services/plastering/PlasteringHero";
 import PlasteringIntro from "@/components/services/plastering/PlasteringIntro";
 import PlasteringServices from "@/components/services/plastering/PlasteringServices";
+import ServiceTestimonial from "@/components/services/ServiceTestimonial";
+import { serviceTestimonials } from "@/data/serviceTestimonials";
 
 export default function PlasteringSurfaceRepairsPage() {
   return (
@@ -15,6 +17,7 @@ export default function PlasteringSurfaceRepairsPage() {
       <PlasteringIntro />
       <PlasteringServices />
       <PlasteringFeatures />
+      <ServiceTestimonial testimonial={serviceTestimonials.plastering} />
       <PlasteringGallery />
       <PlasteringCTA />
       <Footer />
