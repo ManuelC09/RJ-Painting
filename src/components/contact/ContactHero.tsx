@@ -50,7 +50,7 @@ export default function ContactHero() {
             </a>
 
             <a
-              href="mailto:rjspainting@hotmail.com"
+              href="mailto:rjspaintingcontractors@gmail.com"
               className="inline-flex items-center gap-3 rounded-md border border-white/20 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-[#152536]"
             >
               <Mail size={18} />

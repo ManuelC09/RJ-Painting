@@ -69,7 +69,7 @@ export default function Hero() {
 
 I feel that when taking on too many different projects, like commercial and industrial, the quality level that a home should receive is lost. I know when I hire a company to do work with regard to my home, I expect them to treat the job like it was their own home.
 
-That's what RJ Painting brings to you. I have been in this business for 28 years and RJ Painting has been around for over 20 years.
+That's what RJ Painting brings to you. I have been in this business for 36 years and RJ Painting has been around for over 36 years.
             </motion.p>
 
             <motion.div

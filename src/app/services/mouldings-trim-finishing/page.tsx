@@ -14,10 +14,10 @@ export default function MouldingsTrimFinishingPage() {
     <main className="min-h-screen">
       <Navbar />
       <MouldingsHero />
+      <ServiceTestimonial testimonial={serviceTestimonials.mouldings} />
       <MouldingsIntro />
       <MouldingsServices />
       <MouldingsFeatures />
-      <ServiceTestimonial testimonial={serviceTestimonials.mouldings} />
       <MouldingsGallery />
       <MouldingsCTA />
       <Footer />

@@ -3,18 +3,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const services = [
-  {
-    name: "Interior Painting",
-    href: "/services/interior-painting",
-  },
-  {
-    name: "Exterior Painting",
-    href: "/services/exterior-painting",
-  },
-  {
-    name: "Deck Painting & Staining",
-    href: "/services/deck-painting-staining",
-  },
+  { name: "Interior Painting", href: "/services/interior-painting" },
   {
     name: "Plastering & Surface Repairs",
     href: "/services/plastering-surface-repairs",
@@ -23,6 +12,10 @@ const services = [
     name: "Mouldings & Trim Finishing",
     href: "/services/mouldings-trim-finishing",
   },
+  { name: "Exterior Painting", href: "/services/exterior-painting" },
+  { name: "Deck Painting & Staining", href: "/services/deck-painting-staining" },
+  { name: "Deck Cleaning & Protection", href: "/services/deck-cleaning-protection" },
+  { name: "Exterior Brick & Stucco", href: "/services/exterior-brick-stucco" }
 ];
 
 export default function Footer() {
@@ -30,20 +23,23 @@ export default function Footer() {
     <footer className="bg-[#152536] text-white">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="/" className="inline-flex items-center">
+          <Link
+            href="/"
+            className="inline-flex h-[76px] w-[165px] items-center justify-center rounded-2xl bg-white shadow-[0_18px_45px_rgba(0,0,0,0.25)] ring-1 ring-white/20"
+          >
             <Image
               src="/rj-og-logo.png"
               alt="RJ Painting Logo"
-              width={150}
-              height={70}
-              className="h-[58px] w-auto object-contain"
+              width={175}
+              height={78}
+              className="h-[64px] w-auto object-contain"
             />
           </Link>
 
-          <p className="mt-6 max-w-sm text-sm leading-7 text-white/65">
+          <p className="mt-6 max-w-sm text-sm leading-7 text-white/70">
             Professional residential painting services throughout Montreal’s
-            West Island backed by over 28 years of experience, clean
-            workmanship, and Residential Focus.
+            West Island, backed by over 36 years of experience, clean
+            workmanship, and residential focus.
           </p>
         </div>
 
@@ -94,15 +90,15 @@ export default function Footer() {
               className="flex items-start gap-3 transition hover:text-[#8B2E35]"
             >
               <Phone size={18} className="mt-[2px] shrink-0" />
-              <span>(514) 630-4638</span>
+              <span>Rick: +1 (514) 630-4638</span>
             </a>
 
             <a
-              href="mailto:rjspainting@hotmail.com"
+              href="mailto:rjspaintingcontractors@gmail.com"
               className="flex items-start gap-3 transition hover:text-[#8B2E35]"
             >
               <Mail size={18} className="mt-[2px] shrink-0" />
-              <span>rjspainting@hotmail.com</span>
+              <span>rjspaintingcontractors@gmail.com</span>
             </a>
 
             <div className="flex items-start gap-3">
@@ -110,8 +106,7 @@ export default function Footer() {
 
               <span>
                 Montreal’s West Island
-                <br />
-                & Surrounding Areas
+                <br />& Surrounding Areas
               </span>
             </div>
           </div>

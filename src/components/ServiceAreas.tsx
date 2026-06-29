@@ -107,7 +107,7 @@ export default function ServiceAreas() {
                 </h3>
 
                 <p className="mt-5 text-base leading-8 text-[#152536]/70">
-                  With over 28 years of residential painting experience, RJ
+                  With over 36 years of residential painting experience, RJ
                   Painting continues helping homeowners modernize, refresh, and
                   protect their homes with professional workmanship and attention
                   to detail.

@@ -14,10 +14,10 @@ export default function PlasteringSurfaceRepairsPage() {
     <main className="min-h-screen">
       <Navbar />
       <PlasteringHero />
+      <ServiceTestimonial testimonial={serviceTestimonials.plastering} />
       <PlasteringIntro />
       <PlasteringServices />
       <PlasteringFeatures />
-      <ServiceTestimonial testimonial={serviceTestimonials.plastering} />
       <PlasteringGallery />
       <PlasteringCTA />
       <Footer />

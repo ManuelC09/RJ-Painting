@@ -36,11 +36,11 @@ export default function Navbar() {
           </span>
 
           <a
-            href="mailto:rjspainting@hotmail.com"
+            href="mailto:rjspaintingcontractors@gmail.com"
             className="flex items-center gap-2 text-white/85 transition hover:text-white"
           >
             <Mail size={15} />
-            rjspainting@hotmail.com
+            rjspaintingcontractors@gmail.com
           </a>
 
           <a
@@ -48,7 +48,7 @@ export default function Navbar() {
             className="flex items-center gap-2 text-white/85 transition hover:text-white"
           >
             <Phone size={15} />
-            Rick: (514) 630-4638
+            Rick: +1 (514) 630-4638
           </a>
 
         </div>
@@ -70,20 +70,20 @@ export default function Navbar() {
         initial={{ y: -24, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/70 bg-white/95 px-4 py-3 shadow-[0_24px_80px_rgba(21,37,54,0.18)] backdrop-blur-xl lg:rounded-t-none lg:px-5"
+        className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/70 bg-white/95 px-4 py-4 shadow-[0_24px_80px_rgba(21,37,54,0.18)] backdrop-blur-xl lg:rounded-t-none lg:px-5"
       >
         <Link
           href="/"
           className="flex items-center gap-3 rounded-xl px-1.5 py-1 transition hover:opacity-90"
         >
-          <div className="flex h-[58px] w-[112px] items-center justify-center rounded-xl bg-white shadow-[0_8px_30px_rgba(21,37,54,0.10)] ring-1 ring-[#152536]/5 sm:h-[62px] sm:w-[122px] lg:h-[64px] lg:w-[128px]">
+          <div className="flex h-[70px] w-[150px] items-center justify-center rounded-xl bg-white shadow-[0_8px_30px_rgba(21,37,54,0.10)] ring-1 ring-[#152536]/5 sm:h-[74px] sm:w-[165px] lg:h-[78px] lg:w-[175px]">
             <Image
               src="/rj-og-logo.png"
               alt="RJ Painting Logo"
-              width={128}
-              height={64}
+              width={175}
+              height={78}
               priority
-              className="h-[48px] w-auto object-contain sm:h-[52px] lg:h-[54px]"
+              className="h-[62px] w-auto object-contain sm:h-[66px] lg:h-[70px]"
             />
           </div>
         </Link>
@@ -144,7 +144,7 @@ export default function Navbar() {
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F8F5F0]">
               <Phone size={16} />
             </span>
-            (514) 630-4638
+            Rick: +1 (514) 630-4638
           </a>
 
           <Link
@@ -249,7 +249,7 @@ export default function Navbar() {
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#8B2E35] shadow-sm">
                     <Phone size={17} />
                   </span>
-                  (514) 630-4638
+                  Rick: +1 (514) 630-4638
                 </a>
 
                 <Link

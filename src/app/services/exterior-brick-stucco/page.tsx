@@ -14,10 +14,10 @@ export default function ExteriorBrickStuccoPage() {
     <main className="min-h-screen">
       <Navbar />
       <BrickStuccoHero />
+      <ServiceTestimonial testimonial={serviceTestimonials.brickStucco} />
       <BrickStuccoIntro />
       <BrickStuccoServices />
       <BrickStuccoFeatures />
-      <ServiceTestimonial testimonial={serviceTestimonials.brickStucco} />
       <BrickStuccoGallery />
       <BrickStuccoCTA />
       <Footer />

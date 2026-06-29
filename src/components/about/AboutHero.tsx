@@ -49,7 +49,7 @@ export default function AboutHero() {
           >
             RJ Painting has been helping homeowners throughout Montreal’s West
             Island transform and maintain their homes with professional
-            residential painting services for over 28 years.
+            residential painting services for over 36 years.
           </motion.p>
         </div>
       </div>

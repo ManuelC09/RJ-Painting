@@ -59,7 +59,7 @@ export default function TrustIntro() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-[#152536]/75">
-              For more than 28 years, RJ Painting has helped homeowners
+              For more than 36 years, RJ Painting has helped homeowners
               throughout Montreal’s West Island improve and modernize their
               homes through clean workmanship, careful preparation, and
               professional residential painting services.

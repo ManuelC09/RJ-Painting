@@ -14,10 +14,10 @@ export default function DeckPaintingStainingPage() {
     <main className="min-h-screen">
       <Navbar />
       <DeckHero />
+      <ServiceTestimonial testimonial={serviceTestimonials.deckStaining} />
       <DeckIntro />
       <DeckServices />
       <DeckFeatures />
-      <ServiceTestimonial testimonial={serviceTestimonials.deckStaining} />
       <DeckGallery />
       <DeckCTA />
       <Footer />

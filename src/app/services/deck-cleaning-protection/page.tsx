@@ -14,6 +14,7 @@ export default function DeckCleaningProtectionPage() {
     <main className="min-h-screen">
       <Navbar />
       <DeckCleaningHero />
+      <ServiceTestimonial testimonial={serviceTestimonials.deckCleaning} />
       <DeckCleaningIntro />
       <DeckCleaningServices />
       <DeckCleaningFeatures />

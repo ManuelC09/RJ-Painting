@@ -14,10 +14,10 @@ export default function InteriorPaintingPage() {
     <main className="min-h-screen">
       <Navbar />
       <InteriorHero />
+      <ServiceTestimonial testimonial={serviceTestimonials.interiorPainting} />
       <InteriorIntro />
       <InteriorServices />
       <InteriorFeatures />
-      <ServiceTestimonial testimonial={serviceTestimonials.interiorPainting} />
       <InteriorGallery />
       <InteriorCTA />
       <Footer />
