@@ -145,6 +145,86 @@ const galleryItems: GalleryItem[] = [
     large: false,
   },
 
+  {
+    title: "",
+    category: "Exterior Brick & Stucco",
+
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1fyiqqdbG3QWrQ7O_5Eykw0WY8Hjs6i9c&sz=w2000",
+
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1--I0V4xld4jiyFfD3hPAUbYyj8Nq5pFB&sz=w2000",
+
+    large: false,
+  },
+
+  {
+    title: "",
+    category: "Exterior Brick & Stucco",
+
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1I5sSkNHVM1eXKRrRfjMaXlVeA7l22zUv&sz=w2000",
+
+    afterImage:
+      "https://drive.google.com/thumbnail?id=15-RHzID305y1MHeKgtK1oOZqaYfsw1pq&sz=w2000",
+
+    large: false,
+  },
+
+  {
+    title: "",
+    category: "Exterior Brick & Stucco",
+
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=19vFjlbOnU4HZy6qO9Spue-eOdI5WHrg8&sz=w2000",
+
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1b8nPedlBVRUF2EJFBYgQE8U6zo8URz9l&sz=w2000",
+
+    large: false,
+  },
+
+  {
+    title: "",
+    category: "Exterior Brick & Stucco",
+
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1vMl2-c1vQw6ao8t8sv7kUBCDOA9LBty0&sz=w2000",
+
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1gYmTvhC7bJbqBYUh-T9h95EXH6Og-S5c&sz=w2000",
+
+    large: false,
+  },
+
+  {
+    title: "",
+    category: "Exterior Brick & Stucco",
+
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1Dfl4x07BvCPyw9eByPSuqGk9k2cL-SpM&sz=w2000",
+
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1paDKouTZuzyVjOcKN_7STPVwve_vN8ZO&sz=w2000",
+
+    large: false,
+  },
+
+  {
+    title: "",
+    category: "Exterior Brick & Stucco",
+
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1PTiBtizr9ggyslKoF--JgTNAi1AYZWYR&sz=w2000",
+
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1GErK4WZGbacL9iuQIrjKUM6P77r9FP1Z&sz=w2000",
+
+    large: false,
+  },
+
+  
+
 
 
 
