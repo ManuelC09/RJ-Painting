@@ -32,11 +32,11 @@ export default function ServiceTestimonial({
 
             <div className="relative">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#8B2E35] text-white shadow-lg">
-                <Quote size={28} />
+                <Star size={28} />
               </div>
 
               <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#D35B66]">
-                Customer Review
+                Service Feature
               </p>
 
               <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
@@ -44,24 +44,23 @@ export default function ServiceTestimonial({
               </h2>
 
               <p className="mt-5 text-sm leading-7 text-white/65">
-                A relevant homeowner review displayed near the top of this
-                service page to establish trust and confidence from the start.
+                By choosing RJ Painting, you can expect a team of professionals who are dedicated to delivering exceptional results. Our commitment to quality and customer satisfaction ensures that your project will be completed to the highest standards.
               </p>
             </div>
           </div>
 
           <div className="p-8 sm:p-10 lg:p-12">
-            <div className="flex gap-1 text-[#8B2E35]">
+            {/* <div className="flex gap-1 text-[#8B2E35]">
               {[...Array(5)].map((_, index) => (
                 <Star key={index} size={20} fill="currentColor" />
               ))}
-            </div>
+            </div> */}
 
-            <blockquote className="mt-6 text-xl font-semibold leading-9 text-[#152536] sm:text-2xl sm:leading-10">
-              “{testimonial.quote}”
+            <blockquote className="mt-6 text-md font-semibold leading-9 text-[#152536] sm:text-lg sm:leading-10">
+              {testimonial.quote}
             </blockquote>
 
-            <div className="mt-8 border-t border-[#152536]/10 pt-6">
+            {/* <div className="mt-8 border-t border-[#152536]/10 pt-6">
               <p className="text-lg font-extrabold text-[#152536]">
                 {testimonial.name}
               </p>
@@ -69,7 +68,7 @@ export default function ServiceTestimonial({
               <p className="mt-1 text-sm font-semibold uppercase tracking-[0.2em] text-[#8B2E35]">
                 {testimonial.service}
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Home } from "lucide-react";
 import { motion } from "framer-motion";
 
 const stats = [
@@ -48,6 +48,15 @@ export default function Hero() {
               <Star size={16} className="fill-white" />
               Premium Residential Painting
             </motion.div> */}
+            <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="mb-2 inline-flex mt-8 items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur"
+          >
+            <Home size={16} />
+            Home by the Owner
+          </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 34 }}
@@ -63,13 +72,13 @@ export default function Hero() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.25 }}
-              className="mt-6 max-w-2xl text-base leading-8 text-white/82 sm:text-lg"
+              className="max-w-2xl text-base leading-8 text-white/82 sm:text-lg"
             >
               Here at RJ Painting, I don't claim to paint mansions or large companies or take jobs that cost tens of thousands of dollars. I specialize mostly in everyday West Island residential homes.
 
 I feel that when taking on too many different projects, like commercial and industrial, the quality level that a home should receive is lost. I know when I hire a company to do work with regard to my home, I expect them to treat the job like it was their own home.
 
-That's what RJ Painting brings to you. I have been in this business for 36 years and RJ Painting has been around for over 36 years.
+That's what RJ Painting brings to you. I have been in this business for 36 years and RJ Painting has been around for over 28 of them.
             </motion.p>
 
             <motion.div

@@ -131,13 +131,6 @@ export default function RecentProjects() {
             </div>
 
             <div>
-              <p className="text-5xl font-extrabold text-white">1000+</p>
-              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
-                Projects Completed
-              </p>
-            </div>
-
-            <div>
               <div className="flex items-center gap-3">
                 <p className="text-5xl font-extrabold text-white">100%</p>
                 <Sparkles className="text-[#8B2E35]" size={34} />
@@ -146,6 +139,14 @@ export default function RecentProjects() {
                 Residential Focus
               </p>
             </div>
+
+            <div>
+              <p className="text-5xl font-extrabold text-white">1000+</p>
+              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/60">
+                Projects Completed
+              </p>
+            </div>
+
           </div>
         </motion.div>
       </div>

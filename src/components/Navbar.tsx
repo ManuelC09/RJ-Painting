@@ -48,7 +48,7 @@ export default function Navbar() {
             className="flex items-center gap-2 text-white/85 transition hover:text-white"
           >
             <Phone size={15} />
-            Rick: +1 (514) 630-4638
+            Rick: (514) 630-4638
           </a>
 
         </div>
@@ -144,7 +144,7 @@ export default function Navbar() {
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F8F5F0]">
               <Phone size={16} />
             </span>
-            Rick: +1 (514) 630-4638
+            Rick: (514) 630-4638
           </a>
 
           <Link
@@ -249,7 +249,7 @@ export default function Navbar() {
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#8B2E35] shadow-sm">
                     <Phone size={17} />
                   </span>
-                  Rick: +1 (514) 630-4638
+                  Rick: (514) 630-4638
                 </a>
 
                 <Link

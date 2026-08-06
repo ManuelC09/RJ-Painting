@@ -112,7 +112,7 @@ export default function ContactFormSection() {
                   Phone Number
                 </h3>
 
-                <p className="mt-1 text-[#152536]/70">Rick: +1 (514) 630-4638</p>
+                <p className="mt-1 text-[#152536]/70">Rick: (514) 630-4638</p>
               </div>
             </div>
 

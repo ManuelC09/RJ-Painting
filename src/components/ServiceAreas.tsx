@@ -16,7 +16,7 @@ const areas = [
   "Saint-Lazare",
   "Senneville",
   "Hudson",
-  "Pincourte",
+  "Pincourt",
   "L’Île-Perrot",
 ];
 

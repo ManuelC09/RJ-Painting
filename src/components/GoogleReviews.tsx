@@ -217,9 +217,9 @@ export default function GoogleReviews() {
             <div className="flex flex-col justify-center p-8 sm:p-10">
               <div className="inline-flex w-fit items-center gap-3 rounded-full border border-slate-200 bg-[#F8FAFD] px-4 py-2">
                 <GoogleWordmark />
-                <span className="text-sm font-bold text-slate-600">
+                {/* <span className="text-sm font-bold text-slate-600">
                   Maps
-                </span>
+                </span> */}
               </div>
 
               <h3 className="mt-6 text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
@@ -246,7 +246,7 @@ export default function GoogleReviews() {
             </div>
 
             <div className="h-[240px] w-full border-t border-slate-200 sm:h-[300px] md:h-[360px] lg:h-[420px] lg:border-l lg:border-t-0">
-              {/* <iframe
+              <iframe
                 src="https://www.google.com/maps?q=R%20J%20Painting%20Montreal%20West%20Island&output=embed"
                 width="100%"
                 height="100%"
@@ -255,8 +255,8 @@ export default function GoogleReviews() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="RJ Painting Google Maps Location"
-              /> */}
-              <img src="/images/map.jpg" alt="Map of RJ Painting location" className="h-full w-full object-cover object-center" />
+              /> 
+              {/* <img src="/images/map.jpg" alt="Map of RJ Painting location" className="h-full w-full object-cover object-center" /> */}
             </div>
           </div>
         </motion.div>

@@ -223,582 +223,318 @@ const galleryItems: GalleryItem[] = [
     large: false,
   },
 
-  
+  {
+    title: "",
+    category: "Exterior Painting",
 
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=14AKuqWnWRVNlMVNSIU2FSmW1Wa2oiTdC&sz=w2000",
 
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1zCpmw5tafDt42Vf-OH1xdlSLZJi8J3qo&sz=w2000",
 
+    large: false,
+  },
 
-  // {
-  //   title: "Bedroom Interior Painting",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Exterior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1eZirLq56xLtNF-T-olJdGX-R6zeqGz8O&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681240/10_l52qq7.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=14BQULLHr03a_WkzUmCwWqNRj2qFgMjC7&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Interior Room Transformation",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Exterior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1c8zxR6biFr7nZruRF4o1tXG5GxqyZ-_H&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681239/9_nletbm.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1BlCVPKWvADqcAeKQL6xx-YMee1JPjNcC&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Interior Hallway Painting",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Exterior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=15Gm1E8j8a-GR_cbjbCcsGsGwx4XtaZ0W&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681238/8_kmvbb2.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1_YMoN_DXRSFhhbWKAMSst5rXDlOPjj8I&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Interior Painting Project",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Exterior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=102lPYZqPnpFDjbln9n4htySEecN7GJT4&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681237/7_scugvh.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1Qcfaog4h8FCmRGTJMH7andNgiheWwcC0&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Residential Interior Painting",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Exterior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1NPIEJaBcHz6oUjuxVkneeHm8k8SUdw6U&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681236/6_wyaagx.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1DkvKXkqfWUdJY8-v98UxIVuWEm8HmBJl&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Interior Wall Painting",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Interior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1hoTBN5nt6dpVwpjypyRv1XpiZ0uAxGzW&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681236/5_dspj1d.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1ATaoJjrEUL8pVVrpdvWqfwfh_z67qACo&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Interior Painting Finish",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Interior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1RJEGPAWgyPWj0jrxEImi3eJHvO6hXraE&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681235/3_e2q0j9.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1sYc9D3DejUAnN1anYSuuyTq3cxWheE5C&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Interior Home Painting",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Interior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1juQ06iYij450KUS6C5e_fXdpHbaAdr2Y&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681235/4_nvig6v.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1nvpShDssahzxmrTqbCzdzNzu_FNNY6JB&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Interior Colour Transformation",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Interior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1gyCghPkAm9cgOC-h_ANHFLzEfwLVoPkH&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681234/1_n9gh8o.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1zdi2MQ9o-Stdmna9-o4yahsWv5-8CMHC&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Residential Interior Finish",
-  //   category: "Interior Painting",
+  {
+    title: "",
+    category: "Interior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1LbGopVLFus-xlZwcjKee_O1Mhzhf7W0R&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681234/2_rbhetk.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=104fTq0sJRfK4fU-t21UMLPq7_cUbwWy8&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Exterior Painting Project",
-  //   category: "Exterior Painting",
+  {
+    title: "",
+    category: "Interior Painting",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1CC-PhCLB1N9tJ34AhLQ2e28pWKnXax40&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681566/8_rujb5v.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1zR8hys9GqLeOgUSjnQHSzI36zR8cbfK6&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Exterior Home Transformation",
-  //   category: "Exterior Painting",
+  {
+    title: "",
+    category: "Plasteting & Repairs",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1UKfdFqy-IL95pIVE0jPWIhZSDzXZHewv&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681564/5_pl19ci.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1uTHNpHuAt_Or0dHVKYmSaB9w05UdOfq8&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Residential Exterior Painting",
-  //   category: "Exterior Painting",
+  {
+    title: "",
+    category: "Plasteting & Repairs",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1JeN55okOeVlWdMy3aIbIbwZTEckoD5hC&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681563/6_tknec8.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=14t2hYMd6j029eTha8oKyDpnzjDCl8gXZ&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Exterior Colour Upgrade",
-  //   category: "Exterior Painting",
+  {
+    title: "",
+    category: "Plasteting & Repairs",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1sidtec0ks0I8bjQRv7iXAZrHAOx-0Ph9&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681561/7_wgd7un.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1ro8x0uuc40bSEz_xGQ_e_sN52ptsgM8P&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Exterior Painting Finish",
-  //   category: "Exterior Painting",
+  {
+    title: "",
+    category: "Plasteting & Repairs",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1-gl_9KhIVjph7uTXD88HPCXDHPklhWbO&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681561/4_sjcyqo.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1UQCjAHbwjvkYqR373czxJtUdrDVjAvZb&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Exterior Residential Project",
-  //   category: "Exterior Painting",
+  {
+    title: "",
+    category: "Plasteting & Repairs",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1GCMloGmRDVtGej5gByYDpxSwRW9Ln683&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681561/3_ss3ook.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1X4VneSb76Ecoiv3hwMreLRJq0cHmQ6ut&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Exterior Home Painting",
-  //   category: "Exterior Painting",
+  {
+    title: "",
+    category: "Plasteting & Repairs",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1maYiA1Kdmb99eaT0aGHfCwIlUG74KDPn&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681559/2_fetpuo.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1UuqKHpQrqqqjh2XwARGLC82TA4EzW9Ha&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Exterior Painting Transformation",
-  //   category: "Exterior Painting",
+  {
+    title: "",
+    category: "Trim & Moulding",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1o8Bak7qZFtKTLzA2tzNpwtotfUUfDhOV&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681558/1_hm8mbo.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1rnOe0BtEAdxWbW1vzB82TK9sC_k4G2aP&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Deck Staining Project",
-  //   category: "Deck Staining",
+  {
+    title: "",
+    category: "Trim & Moulding",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1_OMW9su65_IM_hhZUVekcnhAV3Y0dNII&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681410/10_xiixlq.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1QgDw23cesOyy47fUPYF8yOSyWhnK81XN&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Deck Restoration",
-  //   category: "Deck Staining",
+  {
+    title: "",
+    category: "Trim & Moulding",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=18aESgdICBWrz2XNagY8dmhuzITQWPdTp&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681409/9_kgh7hf.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1TO7kv7QAsvblhg8eeQYYX_ZG0AeSuuMO&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Residential Deck Staining",
-  //   category: "Deck Staining",
+  {
+    title: "",
+    category: "Trim & Moulding",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1vIwtwhAzptfwidf8eb0AeHomN9_GmUKY&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681406/8_ix6heq.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1_QV9e2mP_gCoc3NDnaVfUBN7_Yd4m_ow&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Deck Colour Transformation",
-  //   category: "Deck Staining",
+  {
+    title: "",
+    category: "Trim & Moulding",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1qFRNNVErewCB6r322EwLyr55KCmr0Msb&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681405/6_lokxc9.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=130_0N3IlwJPX0eEaJtR9SU2QrEf34a7B&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Deck Staining Finish",
-  //   category: "Deck Staining",
+  {
+    title: "",
+    category: "Trim & Moulding",
 
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
+    beforeImage:
+      "https://drive.google.com/thumbnail?id=1ysEO3OTblcUZlDJUacIakFgSf1x5Z7Sv&sz=w2000",
 
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681405/7_vlwg35.png",
+    afterImage:
+      "https://drive.google.com/thumbnail?id=1RJGE3ENS1P7LiRQESTMqhy7QxZhaiM0R&sz=w2000",
 
-  //   large: false,
-  // },
+    large: false,
+  },
 
-  // {
-  //   title: "Exterior Deck Restoration",
-  //   category: "Deck Staining",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681383/4_kvtahb.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Deck Refinishing",
-  //   category: "Deck Staining",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681370/3_fpkqho.jpg",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Deck Staining Transformation",
-  //   category: "Deck Staining",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681369/2_xfz4ux.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Residential Deck Finish",
-  //   category: "Deck Staining",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779681368/1_vgvh5y.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Wall Plastering and Repair",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680952/8_brnukq.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Interior Wall Repair",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680992/9_rkcfew.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Drywall and Plaster Repair",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680993/10_sjcnud.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Residential Plaster Repair",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680951/3_pqlxlu.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Wall Surface Restoration",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680951/7_atuxcn.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Interior Surface Repair",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680951/4_kz5eif.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Plastering Transformation",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680949/5_l4cr0b.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Residential Wall Repair",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680948/6_pj817g.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Wall Repair and Painting",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680948/2_fiwwdf.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Plastering and Wall Restoration",
-  //   category: "Plastering & Repairs",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680946/1_hdlstn.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Trim and Moulding Painting",
-  //   category: "Trim & Mouldings",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680302/8_gjq7op.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Interior Moulding Finish",
-  //   category: "Trim & Mouldings",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680302/9_rpo3kj.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Trim Painting Project",
-  //   category: "Trim & Mouldings",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680302/10_ghu4jw.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Residential Trim Painting",
-  //   category: "Trim & Mouldings",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680271/5_jmsmwd.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Interior Trim Restoration",
-  //   category: "Trim & Mouldings",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680270/3_aihsk6.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Trim and Moulding Transformation",
-  //   category: "Trim & Mouldings",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680270/4_qvm6dd.png",
-
-  //   large: false,
-  // },
-
-  // {
-  //   title: "Interior Moulding Painting",
-  //   category: "Trim & Mouldings",
-
-  //   beforeImage:
-  //     "COLOCA_AQUI_LA_URL_DE_LA_IMAGEN_BEFORE",
-
-  //   afterImage:
-  //     "https://res.cloudinary.com/dackn5ysr/image/upload/v1779680268/2_zaaqco.png",
-
-  //   large: false,
-  // },
 ];
 
 const categories = [
@@ -975,10 +711,10 @@ export default function GalleryGrid() {
                     {item.category}
                   </div>
 
-                  {/* Indicador before/after
+                  {/* Indicador before/after */}
                   <div className="absolute right-5 top-5 rounded-full bg-[#8B2E35]/90 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.15em] text-white backdrop-blur-md">
                     Before / After
-                  </div> */}
+                  </div> 
 
                   {/* Información inferior */}
                   <div className="absolute bottom-0 left-0 w-full p-6">

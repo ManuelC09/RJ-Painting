@@ -90,7 +90,7 @@ export default function Footer() {
               className="flex items-start gap-3 transition hover:text-[#8B2E35]"
             >
               <Phone size={18} className="mt-[2px] shrink-0" />
-              <span>Rick: +1 (514) 630-4638</span>
+              <span>Rick: (514) 630-4638</span>
             </a>
 
             <a
