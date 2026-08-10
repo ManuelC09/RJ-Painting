@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 
 const translations = {
   en: {
@@ -25,20 +24,25 @@ const translations = {
   },
 } as const;
 
-export default function AboutHero() {
-  const pathname = usePathname();
+interface AboutHeroProps {
+  lang: "en" | "fr";
+}
 
-  const lang: "en" | "fr" =
-    pathname.startsWith("/fr") ? "fr" : "en";
-
+export default function AboutHero({
+  lang,
+}: AboutHeroProps) {
   const t = translations[lang];
 
   return (
     <section className="relative min-h-[720px] overflow-hidden">
       {/* Background image */}
       <motion.div
-        initial={{ scale: 1.08 }}
-        animate={{ scale: 1 }}
+        initial={{
+          scale: 1.08,
+        }}
+        animate={{
+          scale: 1,
+        }}
         transition={{
           duration: 2,
           ease: "easeOut",
@@ -55,7 +59,6 @@ export default function AboutHero() {
       {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-[720px] max-w-7xl items-center px-6 pt-44 lg:pt-40">
         <div className="max-w-4xl">
-
           <motion.div
             initial={{
               opacity: 0,
@@ -112,7 +115,6 @@ export default function AboutHero() {
           >
             {t.description}
           </motion.p>
-
         </div>
       </div>
     </section>

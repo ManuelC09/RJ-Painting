@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
 
-interface LanguageLayoutProps {
-  children: React.ReactNode;
-
-  params: Promise<{
-    lang: "en" | "fr";
-  }>;
-}
-
 const seo = {
   en: {
     title:
@@ -68,14 +60,10 @@ const seo = {
   },
 } as const;
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{
-    lang: "en" | "fr";
-  }>;
-}): Promise<Metadata> {
-  const { lang } = await params;
+export async function generateMetadata(
+  props: LayoutProps<"/[lang]">
+): Promise<Metadata> {
+  const { lang } = await props.params;
 
   const currentLang = lang === "fr" ? "fr" : "en";
   const t = seo[currentLang];
@@ -102,11 +90,8 @@ export async function generateMetadata({
 
     openGraph: {
       title: t.title,
-
       description: t.description,
-
       url: `/${currentLang}`,
-
       siteName: "RJ Painting",
 
       images: [
@@ -133,25 +118,21 @@ export async function generateMetadata({
 
     twitter: {
       card: "summary_large_image",
-
       title: t.title,
-
       description: t.description,
-
       images: ["/images/og-image.png"],
     },
   };
 }
 
-export default async function LanguageLayout({
-  children,
-  params,
-}: LanguageLayoutProps) {
-  const { lang } = await params;
+export default async function LanguageLayout(
+  props: LayoutProps<"/[lang]">
+) {
+  const { lang } = await props.params;
 
   return (
     <div lang={lang === "fr" ? "fr-CA" : "en-CA"}>
-      {children}
+      {props.children}
     </div>
   );
 }
