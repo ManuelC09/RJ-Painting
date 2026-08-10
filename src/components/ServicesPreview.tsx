@@ -4,17 +4,17 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  BrickWall,
   Brush,
-  Droplets,
   Hammer,
   Home,
   PaintRoller,
   Sparkles,
+  Frame,
+  Building2,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 
-const serviceConfig = [
+const servicesConfig = [
   {
     key: "interiorPainting",
     icon: PaintRoller,
@@ -25,32 +25,37 @@ const serviceConfig = [
     key: "exteriorPainting",
     icon: Home,
     href: "/services/exterior-painting",
+    featured: false,
   },
   {
     key: "deckPaintingStaining",
     icon: Brush,
     href: "/services/deck-painting-staining",
+    featured: false,
   },
   {
     key: "deckCleaningProtection",
-    icon: Droplets,
+    icon: Sparkles,
     href: "/services/deck-cleaning-protection",
+    featured: false,
   },
   {
     key: "plasteringSurfaceRepairs",
     icon: Hammer,
     href: "/services/plastering-surface-repairs",
+    featured: false,
   },
   {
     key: "mouldingsTrimFinishing",
-    icon: Sparkles,
+    icon: Frame,
     href: "/services/mouldings-trim-finishing",
+    featured: false,
   },
   {
     key: "exteriorBrickStucco",
-    icon: BrickWall,
+    icon: Building2,
     href: "/services/exterior-brick-stucco",
-    featured: true,
+    featured: false,
   },
 ] as const;
 
@@ -171,9 +176,8 @@ const translations = {
 export default function ServicesPreview() {
   const pathname = usePathname();
 
-  const lang: "en" | "fr" = pathname.startsWith("/fr")
-    ? "fr"
-    : "en";
+  const lang: "en" | "fr" =
+    pathname.startsWith("/fr") ? "fr" : "en";
 
   const t = translations[lang];
 
@@ -184,13 +188,22 @@ export default function ServicesPreview() {
   return (
     <section className="relative overflow-hidden bg-white py-24 sm:py-28">
       <div className="relative mx-auto max-w-7xl px-6">
-
         {/* HEADER */}
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 28,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          viewport={{
+            once: true,
+          }}
           className="mx-auto max-w-3xl text-center"
         >
           <div className="inline-flex rounded-full bg-[#263E5A]/10 px-4 py-2 text-sm font-semibold text-[#263E5A]">
@@ -208,20 +221,28 @@ export default function ServicesPreview() {
 
         {/* SERVICES GRID */}
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {serviceConfig.map((service, index) => {
+          {servicesConfig.map((service, index) => {
             const Icon = service.icon;
             const serviceText = t.services[service.key];
 
             return (
               <motion.div
                 key={service.key}
-                initial={{ opacity: 0, y: 34 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{
+                  opacity: 0,
+                  y: 34,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
                 transition={{
                   duration: 0.55,
                   delay: index * 0.08,
                 }}
-                viewport={{ once: true }}
+                viewport={{
+                  once: true,
+                }}
                 className={`group relative overflow-hidden rounded-[2rem] border border-[#152536]/10 bg-[#F8F5F0] p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-2xl ${
                   service.featured ? "lg:col-span-2" : ""
                 }`}

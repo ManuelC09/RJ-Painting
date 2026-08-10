@@ -13,14 +13,17 @@ const galleryConfig = [
   {
     key: "brickRefresh",
     image: "/images/exterior-gallery-2.png",
+    large: false,
   },
   {
     key: "curbAppealUpgrade",
     image: "/images/exterior-gallery-3.png",
+    large: false,
   },
   {
     key: "garageTrimFinish",
     image: "/images/exterior-gallery-4.jpg",
+    large: false,
   },
 ] as const;
 

@@ -13,14 +13,17 @@ const galleryConfig = [
   {
     key: "stuccoUpdate",
     image: "/images/brick-stucco-gallery-2.webp",
+    large: false,
   },
   {
     key: "surfaceModernization",
     image: "/images/brick-stucco-gallery-3.webp",
+    large: false,
   },
   {
     key: "curbAppeal",
     image: "/images/brick-stucco-gallery-4.webp",
+    large: false,
   },
 ] as const;
 

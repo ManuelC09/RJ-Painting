@@ -13,14 +13,17 @@ const galleryConfig = [
   {
     key: "wallPatching",
     image: "/images/plastering-gallery-2.jpg",
+    large: false,
   },
   {
     key: "crackRepair",
     image: "/images/plastering-gallery-3.jpg",
+    large: false,
   },
   {
     key: "finishedSurface",
     image: "/images/plastering-gallery-4.jpg",
+    large: false,
   },
 ] as const;
 

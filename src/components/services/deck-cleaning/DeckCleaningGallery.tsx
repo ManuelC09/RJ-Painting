@@ -13,14 +13,17 @@ const galleryConfig = [
   {
     key: "woodRefresh",
     image: "/images/deck-cleaning-gallery-2.jpeg",
+    large: false,
   },
   {
     key: "protectionPreparation",
     image: "/images/deck-cleaning-gallery-3.png",
+    large: false,
   },
   {
     key: "maintainedSpace",
     image: "/images/deck-cleaning-gallery-4.webp",
+    large: false,
   },
 ] as const;
 

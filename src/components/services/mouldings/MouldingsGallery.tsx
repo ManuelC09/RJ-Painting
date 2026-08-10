@@ -13,14 +13,17 @@ const galleryConfig = [
   {
     key: "crownMouldings",
     image: "/images/mouldings-gallery-2.jpg",
+    large: false,
   },
   {
     key: "windowTrim",
     image: "/images/mouldings-gallery-3.jpg",
+    large: false,
   },
   {
     key: "doorFrames",
     image: "/images/mouldings-gallery-4.jpg",
+    large: false,
   },
 ] as const;
 

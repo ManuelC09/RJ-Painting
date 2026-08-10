@@ -13,14 +13,17 @@ const galleryConfig = [
   {
     key: "outdoorWoodRefresh",
     image: "/images/deck-gallery-2.png",
+    large: false,
   },
   {
     key: "fenceStaining",
     image: "/images/deck-gallery-3.png",
+    large: false,
   },
   {
     key: "patioDeck",
     image: "/images/deck-gallery-4.png",
+    large: false,
   },
 ] as const;
 

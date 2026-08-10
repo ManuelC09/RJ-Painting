@@ -13,14 +13,17 @@ const galleryConfig = [
   {
     key: "kitchen",
     image: "/images/interior-gallery-2.png",
+    large: false,
   },
   {
     key: "staircase",
     image: "/images/interior-gallery-3.png",
+    large: false,
   },
   {
     key: "bedroom",
     image: "/images/interior-gallery-4.png",
+    large: false,
   },
 ] as const;
 
