@@ -9,17 +9,38 @@ import PlasteringServices from "@/components/services/plastering/PlasteringServi
 import ServiceTestimonial from "@/components/services/ServiceTestimonial";
 import { serviceTestimonials } from "@/data/serviceTestimonials";
 
-export default function PlasteringSurfaceRepairsPage() {
+interface PlasteringSurfaceRepairsPageProps {
+  params: Promise<{
+    lang: "en" | "fr";
+  }>;
+}
+
+export default async function PlasteringSurfaceRepairsPage({
+  params,
+}: PlasteringSurfaceRepairsPageProps) {
+  const { lang } = await params;
+
   return (
     <main className="min-h-screen">
       <Navbar />
-      <PlasteringHero />
-      <ServiceTestimonial testimonial={serviceTestimonials.plastering} />
-      <PlasteringIntro />
-      <PlasteringServices />
-      <PlasteringFeatures />
-      <PlasteringGallery />
-      <PlasteringCTA />
+
+      <PlasteringHero lang={lang} />
+
+      <ServiceTestimonial
+        lang={lang}
+        testimonial={serviceTestimonials.plastering[lang]}
+      />
+
+      <PlasteringIntro lang={lang} />
+
+      <PlasteringServices lang={lang} />
+
+      <PlasteringFeatures lang={lang} />
+
+      <PlasteringGallery lang={lang} />
+
+      <PlasteringCTA lang={lang} />
+
       <Footer />
     </main>
   );

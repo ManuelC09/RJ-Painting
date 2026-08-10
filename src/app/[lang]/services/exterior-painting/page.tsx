@@ -9,17 +9,38 @@ import ExteriorCTA from "@/components/services/exterior/ExteriorCTA";
 import ServiceTestimonial from "@/components/services/ServiceTestimonial";
 import { serviceTestimonials } from "@/data/serviceTestimonials";
 
-export default function InteriorPaintingPage() {
+interface ExteriorPaintingPageProps {
+  params: Promise<{
+    lang: "en" | "fr";
+  }>;
+}
+
+export default async function ExteriorPaintingPage({
+  params,
+}: ExteriorPaintingPageProps) {
+  const { lang } = await params;
+
   return (
     <main className="min-h-screen">
       <Navbar />
-        <ExteriorHero />
-        <ServiceTestimonial testimonial={serviceTestimonials.exteriorPainting} />
-        <ExteriorIntro />
-        <ExteriorServices />
-        <ExteriorFeatures />
-        <ExteriorGallery />
-        <ExteriorCTA />
+
+      <ExteriorHero lang={lang} />
+
+      <ServiceTestimonial
+        lang={lang}
+        testimonial={serviceTestimonials.exteriorPainting[lang]}
+      />
+
+      <ExteriorIntro lang={lang} />
+
+      <ExteriorServices lang={lang} />
+
+      <ExteriorFeatures lang={lang} />
+
+      <ExteriorGallery lang={lang} />
+
+      <ExteriorCTA lang={lang} />
+
       <Footer />
     </main>
   );

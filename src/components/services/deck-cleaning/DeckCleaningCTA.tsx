@@ -4,41 +4,90 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 
-export default function DeckCleaningCTA() {
+const translations = {
+  en: {
+    eyebrow: "Ready To Clean & Protect Your Deck?",
+
+    title:
+      "Refresh Your Outdoor Space With Professional Deck Care",
+
+    description:
+      "RJ Painting provides deck cleaning and protection services designed to restore appearance, prepare surfaces, and help protect your backyard deck.",
+
+    estimateButton: "Request a Free Estimate",
+
+    callButton: "Call Now",
+  },
+
+  fr: {
+    eyebrow: "Prêt à nettoyer et protéger votre terrasse?",
+
+    title:
+      "Rafraîchissez votre espace extérieur grâce à un entretien professionnel de terrasse",
+
+    description:
+      "RJ Painting offre des services de nettoyage et de protection de terrasses conçus pour restaurer leur apparence, préparer les surfaces et aider à protéger votre terrasse extérieure.",
+
+    estimateButton: "Demander une estimation gratuite",
+
+    callButton: "Appelez maintenant",
+  },
+} as const;
+
+interface DeckCleaningCTAProps {
+  lang: "en" | "fr";
+}
+
+export default function DeckCleaningCTA({
+  lang,
+}: DeckCleaningCTAProps) {
+  const t = translations[lang];
+
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-24">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative overflow-hidden bg-[#F8F5F0] py-24 sm:py-28">
+      <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 35,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          viewport={{
+            once: true,
+          }}
           className="relative overflow-hidden rounded-[2rem] bg-[#152536] px-8 py-20 text-center shadow-2xl sm:px-12 lg:px-20"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(139,46,53,0.55),transparent_35%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(38,62,90,0.8),transparent_40%)]" />
+          {/* BACKGROUND ACCENTS */}
+          <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-[#8B2E35]/20 blur-3xl" />
+
+          <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-[#263E5A]/40 blur-3xl" />
 
           <div className="relative mx-auto max-w-4xl">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#D35B66]">
-              Ready To Clean & Protect Your Deck?
+              {t.eyebrow}
             </p>
 
             <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Refresh Your Outdoor Space With Professional Deck Care
+              {t.title}
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75">
-              RJ Painting provides deck cleaning and protection services designed
-              to restore appearance, prepare surfaces, and help protect your
-              backyard deck.
+              {t.description}
             </p>
 
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                href="/contact"
+                href={`/${lang}/contact#contact`}
                 className="group inline-flex items-center justify-center gap-3 rounded-md bg-[#8B2E35] px-8 py-4 text-sm font-bold text-white transition hover:bg-[#D35B66]"
               >
-                Request a Free Estimate
+                {t.estimateButton}
+
                 <ArrowRight
                   size={18}
                   className="transition group-hover:translate-x-1"
@@ -50,7 +99,7 @@ export default function DeckCleaningCTA() {
                 className="inline-flex items-center justify-center gap-3 rounded-md border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-[#152536]"
               >
                 <Phone size={18} />
-                Call Now
+                {t.callButton}
               </a>
             </div>
           </div>

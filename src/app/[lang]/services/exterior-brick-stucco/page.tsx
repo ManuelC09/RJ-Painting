@@ -9,17 +9,38 @@ import BrickStuccoServices from "@/components/services/brick-stucco/BrickStuccoS
 import ServiceTestimonial from "@/components/services/ServiceTestimonial";
 import { serviceTestimonials } from "@/data/serviceTestimonials";
 
-export default function ExteriorBrickStuccoPage() {
+interface ExteriorBrickStuccoPageProps {
+  params: Promise<{
+    lang: "en" | "fr";
+  }>;
+}
+
+export default async function ExteriorBrickStuccoPage({
+  params,
+}: ExteriorBrickStuccoPageProps) {
+  const { lang } = await params;
+
   return (
     <main className="min-h-screen">
       <Navbar />
-      <BrickStuccoHero />
-      <ServiceTestimonial testimonial={serviceTestimonials.brickStucco} />
-      <BrickStuccoIntro />
-      <BrickStuccoServices />
-      <BrickStuccoFeatures />
-      <BrickStuccoGallery />
-      <BrickStuccoCTA />
+
+      <BrickStuccoHero lang={lang} />
+
+      <ServiceTestimonial
+        lang={lang}
+        testimonial={serviceTestimonials.brickStucco[lang]}
+      />
+
+      <BrickStuccoIntro lang={lang} />
+
+      <BrickStuccoServices lang={lang} />
+
+      <BrickStuccoFeatures lang={lang} />
+
+      <BrickStuccoGallery lang={lang} />
+
+      <BrickStuccoCTA lang={lang} />
+
       <Footer />
     </main>
   );

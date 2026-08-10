@@ -3,49 +3,120 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
-const highlights = [
-  "Exterior Siding Painting",
-  "Brick Painting & Modernization",
-  "Garage Doors & Entryways",
-  "Trim, Shutters & Wood Surfaces",
-];
+const translations = {
+  en: {
+    badge: "Exterior Residential Painting",
 
-export default function ExteriorIntro() {
+    title:
+      "Improve Curb Appeal & Protect Your Home",
+
+    paragraphOne:
+      "Exterior painting is one of the most impactful ways to modernize your property while protecting surfaces from weather, moisture, sunlight, and long-term wear.",
+
+    paragraphTwo:
+      "RJ Painting focuses on durable finishes, professional preparation, and clean workmanship designed to withstand Montreal’s changing seasons while elevating the appearance of your home.",
+
+    highlights: [
+      "Exterior Siding Painting",
+      "Brick Painting & Modernization",
+      "Garage Doors & Entryways",
+      "Trim, Shutters & Wood Surfaces",
+    ],
+
+    imageAlt: "Exterior Painting",
+
+    cardBadge:
+      "Durable Exterior Finishes",
+
+    cardTitle:
+      "Professional Curb Appeal",
+
+    cardDescription:
+      "Exterior residential painting focused on protection, preparation, and long-lasting visual impact.",
+  },
+
+  fr: {
+    badge: "Peinture résidentielle extérieure",
+
+    title:
+      "Améliorez l’apparence extérieure et protégez votre maison",
+
+    paragraphOne:
+      "La peinture extérieure est l’une des façons les plus efficaces de moderniser votre propriété tout en protégeant les surfaces contre les intempéries, l’humidité, le soleil et l’usure à long terme.",
+
+    paragraphTwo:
+      "RJ Painting mise sur des finis durables, une préparation professionnelle et un travail soigné conçus pour résister aux saisons changeantes de Montréal tout en améliorant l’apparence de votre maison.",
+
+    highlights: [
+      "Peinture de revêtement extérieur",
+      "Peinture et modernisation de la brique",
+      "Portes de garage et entrées",
+      "Moulures, volets et surfaces en bois",
+    ],
+
+    imageAlt:
+      "Peinture extérieure",
+
+    cardBadge:
+      "Finis extérieurs durables",
+
+    cardTitle:
+      "Une apparence extérieure professionnelle",
+
+    cardDescription:
+      "Peinture résidentielle extérieure axée sur la protection, la préparation et un impact visuel durable.",
+  },
+} as const;
+
+interface ExteriorIntroProps {
+  lang: "en" | "fr";
+}
+
+export default function ExteriorIntro({
+  lang,
+}: ExteriorIntroProps) {
+  const t = translations[lang];
+
   return (
-    <section className="relative overflow-hidden bg-[#F8F5F0] py-28">
-      <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#8B2E35]/5 blur-3xl" />
-      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#263E5A]/5 blur-3xl" />
-
+    <section className="relative overflow-hidden bg-[#F8F5F0] py-24 sm:py-28">
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-20 lg:grid-cols-[1fr_0.95fr]">
+
+          {/* LEFT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              y: 35,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
+            viewport={{
+              once: true,
+            }}
           >
             <div className="inline-flex rounded-full bg-[#8B2E35]/10 px-4 py-2 text-sm font-semibold text-[#8B2E35]">
-              Exterior Residential Painting
+              {t.badge}
             </div>
 
             <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-[#152536] sm:text-5xl">
-              Improve Curb Appeal & Protect Your Home
+              {t.title}
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-[#152536]/70">
-              Exterior painting is one of the most impactful ways to modernize
-              your property while protecting surfaces from weather, moisture,
-              sunlight, and long-term wear.
+              {t.paragraphOne}
             </p>
 
             <p className="mt-6 text-base leading-8 text-[#152536]/70">
-              RJ Painting focuses on durable finishes, professional preparation,
-              and clean workmanship designed to withstand Montreal’s changing
-              seasons while elevating the appearance of your home.
+              {t.paragraphTwo}
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {highlights.map((item) => (
+              {t.highlights.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-3 rounded-xl border border-[#152536]/10 bg-white px-5 py-4 shadow-sm"
@@ -63,36 +134,47 @@ export default function ExteriorIntro() {
             </div>
           </motion.div>
 
+          {/* RIGHT IMAGE */}
           <motion.div
-            initial={{ opacity: 0, x: 45 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              x: 45,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.8,
+            }}
+            viewport={{
+              once: true,
+            }}
             className="relative"
           >
             <div className="overflow-hidden rounded-[2rem] shadow-2xl">
               <img
                 src="/images/exterior-about.png"
-                alt="Exterior Painting"
+                alt={t.imageAlt}
                 className="h-[650px] w-full object-cover"
               />
             </div>
 
             <div className="absolute -bottom-8 -left-8 hidden rounded-[2rem] bg-white p-8 shadow-2xl lg:block">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8B2E35]">
-                Durable Exterior Finishes
+                {t.cardBadge}
               </p>
 
               <h3 className="mt-3 text-3xl font-extrabold text-[#152536]">
-                Professional Curb Appeal
+                {t.cardTitle}
               </h3>
 
               <p className="mt-3 max-w-xs text-sm leading-7 text-[#152536]/70">
-                Exterior residential painting focused on protection, preparation,
-                and long-lasting visual impact.
+                {t.cardDescription}
               </p>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

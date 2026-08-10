@@ -9,17 +9,38 @@ import DeckServices from "@/components/services/deck/DeckServices";
 import ServiceTestimonial from "@/components/services/ServiceTestimonial";
 import { serviceTestimonials } from "@/data/serviceTestimonials";
 
-export default function DeckPaintingStainingPage() {
+interface DeckPaintingStainingPageProps {
+  params: Promise<{
+    lang: "en" | "fr";
+  }>;
+}
+
+export default async function DeckPaintingStainingPage({
+  params,
+}: DeckPaintingStainingPageProps) {
+  const { lang } = await params;
+
   return (
     <main className="min-h-screen">
       <Navbar />
-      <DeckHero />
-      <ServiceTestimonial testimonial={serviceTestimonials.deckStaining} />
-      <DeckIntro />
-      <DeckServices />
-      <DeckFeatures />
-      <DeckGallery />
-      <DeckCTA />
+
+      <DeckHero lang={lang} />
+
+      <ServiceTestimonial
+        lang={lang}
+        testimonial={serviceTestimonials.deckStaining[lang]}
+      />
+
+      <DeckIntro lang={lang} />
+
+      <DeckServices lang={lang} />
+
+      <DeckFeatures lang={lang} />
+
+      <DeckGallery lang={lang} />
+
+      <DeckCTA lang={lang} />
+
       <Footer />
     </main>
   );

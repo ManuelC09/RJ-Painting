@@ -9,17 +9,38 @@ import DeckCleaningServices from "@/components/services/deck-cleaning/DeckCleani
 import ServiceTestimonial from "@/components/services/ServiceTestimonial";
 import { serviceTestimonials } from "@/data/serviceTestimonials";
 
-export default function DeckCleaningProtectionPage() {
+interface DeckCleaningProtectionPageProps {
+  params: Promise<{
+    lang: "en" | "fr";
+  }>;
+}
+
+export default async function DeckCleaningProtectionPage({
+  params,
+}: DeckCleaningProtectionPageProps) {
+  const { lang } = await params;
+
   return (
     <main className="min-h-screen">
       <Navbar />
-      <DeckCleaningHero />
-      <ServiceTestimonial testimonial={serviceTestimonials.deckCleaning} />
-      <DeckCleaningIntro />
-      <DeckCleaningServices />
-      <DeckCleaningFeatures />
-      <DeckCleaningGallery />
-      <DeckCleaningCTA />
+
+      <DeckCleaningHero lang={lang} />
+
+      <ServiceTestimonial
+        lang={lang}
+        testimonial={serviceTestimonials.deckCleaning[lang]}
+      />
+
+      <DeckCleaningIntro lang={lang} />
+
+      <DeckCleaningServices lang={lang} />
+
+      <DeckCleaningFeatures lang={lang} />
+
+      <DeckCleaningGallery lang={lang} />
+
+      <DeckCleaningCTA lang={lang} />
+
       <Footer />
     </main>
   );

@@ -3,55 +3,122 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
-const highlights = [
-  "Exterior Brick Painting",
-  "Stucco Surface Painting",
-  "Modern Colour Updates",
-  "Weather-Resistant Finishes",
-];
+const translations = {
+  en: {
+    badge: "Exterior Surface Modernization",
 
-export default function BrickStuccoIntro() {
+    title:
+      "Refresh Outdated Brick & Stucco With A Modern Finish",
+
+    paragraphOne:
+      "Brick and stucco surfaces can make a home feel dated when the exterior colour no longer matches the style of the property. Professional painting can dramatically modernize the look of your home without requiring a full exterior renovation.",
+
+    paragraphTwo:
+      "RJ Painting focuses on proper preparation, clean application, and exterior finishes designed to improve curb appeal while protecting your home’s exterior surfaces.",
+
+    highlights: [
+      "Exterior Brick Painting",
+      "Stucco Surface Painting",
+      "Modern Colour Updates",
+      "Weather-Resistant Finishes",
+    ],
+
+    imageAlt: "Exterior brick and stucco painting",
+
+    cardBadge: "Modern Exterior Finish",
+    cardTitle: "Brick & Stucco Refresh",
+
+    cardDescription:
+      "Exterior painting designed to modernize, protect, and improve curb appeal.",
+  },
+
+  fr: {
+    badge: "Modernisation des surfaces extérieures",
+
+    title:
+      "Rafraîchissez la brique et le stuc vieillissants avec un fini moderne",
+
+    paragraphOne:
+      "Les surfaces de brique et de stuc peuvent donner à une maison une apparence vieillissante lorsque la couleur extérieure ne correspond plus au style de la propriété. Une peinture professionnelle peut moderniser considérablement l’apparence de votre maison sans nécessiter une rénovation extérieure complète.",
+
+    paragraphTwo:
+      "RJ Painting mise sur une préparation adéquate, une application soignée et des finis extérieurs conçus pour améliorer l’apparence de votre propriété tout en protégeant les surfaces extérieures de votre maison.",
+
+    highlights: [
+      "Peinture de brique extérieure",
+      "Peinture de surfaces en stuc",
+      "Mise à jour moderne des couleurs",
+      "Finis résistants aux intempéries",
+    ],
+
+    imageAlt: "Peinture extérieure de brique et de stuc",
+
+    cardBadge: "Fini extérieur moderne",
+    cardTitle: "Rafraîchissement de la brique et du stuc",
+
+    cardDescription:
+      "Une peinture extérieure conçue pour moderniser, protéger et améliorer l’apparence de votre propriété.",
+  },
+} as const;
+
+interface BrickStuccoIntroProps {
+  lang: "en" | "fr";
+}
+
+export default function BrickStuccoIntro({
+  lang,
+}: BrickStuccoIntroProps) {
+  const t = translations[lang];
+
   return (
-    <section className="relative overflow-hidden bg-[#F8F5F0] py-28">
-      <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#8B2E35]/5 blur-3xl" />
-      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#263E5A]/5 blur-3xl" />
-
+    <section className="relative overflow-hidden bg-[#F8F5F0] py-24 sm:py-28">
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-20 lg:grid-cols-[1fr_0.95fr]">
+
+          {/* LEFT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              y: 35,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
+            viewport={{
+              once: true,
+            }}
           >
             <div className="inline-flex rounded-full bg-[#8B2E35]/10 px-4 py-2 text-sm font-semibold text-[#8B2E35]">
-              Exterior Surface Modernization
+              {t.badge}
             </div>
 
             <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-[#152536] sm:text-5xl">
-              Refresh Outdated Brick & Stucco With A Modern Finish
+              {t.title}
             </h2>
 
             <p className="mt-6 text-lg leading-8 text-[#152536]/70">
-              Brick and stucco surfaces can make a home feel dated when the
-              exterior colour no longer matches the style of the property.
-              Professional painting can dramatically modernize the look of your
-              home without requiring a full exterior renovation.
+              {t.paragraphOne}
             </p>
 
             <p className="mt-6 text-base leading-8 text-[#152536]/70">
-              RJ Painting focuses on proper preparation, clean application, and
-              exterior finishes designed to improve curb appeal while protecting
-              your home’s exterior surfaces.
+              {t.paragraphTwo}
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {highlights.map((item) => (
+              {t.highlights.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-3 rounded-xl border border-[#152536]/10 bg-white px-5 py-4 shadow-sm"
                 >
-                  <CheckCircle size={18} className="text-[#8B2E35]" />
+                  <CheckCircle
+                    size={18}
+                    className="text-[#8B2E35]"
+                  />
+
                   <span className="text-sm font-semibold text-[#152536]">
                     {item}
                   </span>
@@ -60,36 +127,47 @@ export default function BrickStuccoIntro() {
             </div>
           </motion.div>
 
+          {/* RIGHT IMAGE */}
           <motion.div
-            initial={{ opacity: 0, x: 45 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              x: 45,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.8,
+            }}
+            viewport={{
+              once: true,
+            }}
             className="relative"
           >
             <div className="overflow-hidden rounded-[2rem] shadow-2xl">
               <img
                 src="/images/brick-stucco-about.jpg"
-                alt="Exterior brick and stucco painting"
+                alt={t.imageAlt}
                 className="h-[650px] w-full object-cover"
               />
             </div>
 
             <div className="absolute -bottom-8 -left-8 hidden rounded-[2rem] bg-white p-8 shadow-2xl lg:block">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8B2E35]">
-                Modern Exterior Finish
+                {t.cardBadge}
               </p>
 
               <h3 className="mt-3 text-3xl font-extrabold text-[#152536]">
-                Brick & Stucco Refresh
+                {t.cardTitle}
               </h3>
 
               <p className="mt-3 max-w-xs text-sm leading-7 text-[#152536]/70">
-                Exterior painting designed to modernize, protect, and improve
-                curb appeal.
+                {t.cardDescription}
               </p>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

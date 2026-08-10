@@ -9,17 +9,38 @@ import MouldingsServices from "@/components/services/mouldings/MouldingsServices
 import ServiceTestimonial from "@/components/services/ServiceTestimonial";
 import { serviceTestimonials } from "@/data/serviceTestimonials";
 
-export default function MouldingsTrimFinishingPage() {
+interface MouldingsTrimFinishingPageProps {
+  params: Promise<{
+    lang: "en" | "fr";
+  }>;
+}
+
+export default async function MouldingsTrimFinishingPage({
+  params,
+}: MouldingsTrimFinishingPageProps) {
+  const { lang } = await params;
+
   return (
     <main className="min-h-screen">
       <Navbar />
-      <MouldingsHero />
-      <ServiceTestimonial testimonial={serviceTestimonials.mouldings} />
-      <MouldingsIntro />
-      <MouldingsServices />
-      <MouldingsFeatures />
-      <MouldingsGallery />
-      <MouldingsCTA />
+
+      <MouldingsHero lang={lang} />
+
+      <ServiceTestimonial
+        lang={lang}
+        testimonial={serviceTestimonials.mouldings[lang]}
+      />
+
+      <MouldingsIntro lang={lang} />
+
+      <MouldingsServices lang={lang} />
+
+      <MouldingsFeatures lang={lang} />
+
+      <MouldingsGallery lang={lang} />
+
+      <MouldingsCTA lang={lang} />
+
       <Footer />
     </main>
   );

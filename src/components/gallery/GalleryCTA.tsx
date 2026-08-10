@@ -4,42 +4,99 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 
-export default function GalleryCTA() {
+const translations = {
+  en: {
+    eyebrow: "Ready To Transform Your Home?",
+
+    title:
+      "Bring Professional Painting Results To Your Own Home",
+
+    description:
+      "Whether you’re planning an interior refresh, exterior repaint, deck restoration, or finishing project, RJ Painting is ready to help.",
+
+    estimateButton: "Request a Free Estimate",
+
+    callButton: "Call Now",
+  },
+
+  fr: {
+    eyebrow: "Prêt à transformer votre maison?",
+
+    title:
+      "Profitez de résultats de peinture professionnels dans votre propre maison",
+
+    description:
+      "Que vous planifiiez de rafraîchir votre intérieur, de repeindre l’extérieur, de restaurer votre terrasse ou de réaliser des travaux de finition, RJ Painting est prêt à vous aider.",
+
+    estimateButton: "Demander une estimation gratuite",
+
+    callButton: "Appelez maintenant",
+  },
+} as const;
+
+interface GalleryCTAProps {
+  lang: "en" | "fr";
+}
+
+export default function GalleryCTA({
+  lang,
+}: GalleryCTAProps) {
+  const t = translations[lang];
+
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-24">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative overflow-hidden bg-[#F8F5F0] py-24 sm:py-28">
+      <div className="relative mx-auto max-w-7xl px-6">
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 35,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          viewport={{
+            once: true,
+          }}
           className="relative overflow-hidden rounded-[2rem] bg-[#152536] px-8 py-20 text-center shadow-2xl sm:px-12 lg:px-20"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(139,46,53,0.55),transparent_35%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(38,62,90,0.8),transparent_40%)]" />
+          {/* BACKGROUND ACCENTS */}
+          <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-[#8B2E35]/20 blur-3xl" />
+
+          <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-[#263E5A]/40 blur-3xl" />
 
           <div className="relative mx-auto max-w-4xl">
+
+            {/* EYEBROW */}
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#8B2E35]">
-              Ready To Transform Your Home?
+              {t.eyebrow}
             </p>
 
+            {/* TITLE */}
             <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Bring Professional Painting Results To Your Own Home
+              {t.title}
             </h2>
 
+            {/* DESCRIPTION */}
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75">
-              Whether you’re planning an interior refresh, exterior repaint,
-              deck restoration, or finishing project, RJ Painting is ready to
-              help.
+              {t.description}
             </p>
 
+            {/* BUTTONS */}
             <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                href="/contact"
+                href={`/${lang}/contact#contact`}
                 className="group inline-flex items-center justify-center gap-3 rounded-md bg-[#8B2E35] px-8 py-4 text-sm font-bold text-white transition hover:bg-[#D35B66]"
               >
-                Request a Free Estimate
-                <ArrowRight size={18} className="transition group-hover:translate-x-1" />
+                {t.estimateButton}
+
+                <ArrowRight
+                  size={18}
+                  className="transition group-hover:translate-x-1"
+                />
               </Link>
 
               <a
@@ -47,9 +104,11 @@ export default function GalleryCTA() {
                 className="inline-flex items-center justify-center gap-3 rounded-md border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-[#152536]"
               >
                 <Phone size={18} />
-                Call Now
+
+                {t.callButton}
               </a>
             </div>
+
           </div>
         </motion.div>
       </div>

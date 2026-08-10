@@ -12,68 +12,180 @@ import {
   PaintRoller,
   Sparkles,
 } from "lucide-react";
+import { usePathname } from "next/navigation";
 
-const services = [
+const serviceConfig = [
   {
+    key: "interiorPainting",
     icon: PaintRoller,
-    title: "Interior Painting",
-    description:
-      "Clean, modern interior painting for living rooms, kitchens, bedrooms, hallways, basements, and full-home repaints.",
     href: "/services/interior-painting",
     featured: true,
   },
   {
+    key: "exteriorPainting",
     icon: Home,
-    title: "Exterior Painting",
-    description:
-      "Durable exterior painting designed to improve curb appeal and protect your home from Montreal’s changing seasons.",
     href: "/services/exterior-painting",
   },
   {
+    key: "deckPaintingStaining",
     icon: Brush,
-    title: "Deck Painting & Staining",
-    description:
-      "Restore outdoor wood surfaces with professional deck staining, painting, and preparation.",
     href: "/services/deck-painting-staining",
   },
   {
+    key: "deckCleaningProtection",
     icon: Droplets,
-    title: "Deck Cleaning & Protection",
-    description:
-      "Clean, refresh, and protect outdoor deck surfaces from weather, moisture, dirt, and seasonal wear.",
     href: "/services/deck-cleaning-protection",
   },
   {
+    key: "plasteringSurfaceRepairs",
     icon: Hammer,
-    title: "Plastering & Surface Repairs",
-    description:
-      "Wall patching, crack repairs, minor drywall repair, plaster touch-ups, and smooth surface preparation.",
     href: "/services/plastering-surface-repairs",
   },
   {
+    key: "mouldingsTrimFinishing",
     icon: Sparkles,
-    title: "Mouldings & Trim Finishing",
-    description:
-      "Detailed finishing for baseboards, crown mouldings, window trim, door frames, and accent trim.",
     href: "/services/mouldings-trim-finishing",
   },
   {
+    key: "exteriorBrickStucco",
     icon: BrickWall,
-    title: "Exterior Brick & Stucco",
-    description:
-      "Modernize brick and stucco surfaces with professional exterior painting and curb appeal upgrades.",
     href: "/services/exterior-brick-stucco",
     featured: true,
   },
-];
+] as const;
+
+const translations = {
+  en: {
+    badge: "Residential Painting Services",
+
+    title:
+      "Complete Painting & Finishing Services For Your Home",
+
+    description:
+      "RJ Painting provides complete residential painting and finishing services for homeowners throughout Montreal’s West Island and surrounding areas.",
+
+    learnMore: "Learn More",
+
+    services: {
+      interiorPainting: {
+        title: "Interior Painting",
+        description:
+          "Clean, modern interior painting for living rooms, kitchens, bedrooms, hallways, basements, and full-home repaints.",
+      },
+
+      exteriorPainting: {
+        title: "Exterior Painting",
+        description:
+          "Durable exterior painting designed to improve curb appeal and protect your home from Montreal’s changing seasons.",
+      },
+
+      deckPaintingStaining: {
+        title: "Deck Painting & Staining",
+        description:
+          "Restore outdoor wood surfaces with professional deck staining, painting, and preparation.",
+      },
+
+      deckCleaningProtection: {
+        title: "Deck Cleaning & Protection",
+        description:
+          "Clean, refresh, and protect outdoor deck surfaces from weather, moisture, dirt, and seasonal wear.",
+      },
+
+      plasteringSurfaceRepairs: {
+        title: "Plastering & Surface Repairs",
+        description:
+          "Wall patching, crack repairs, minor drywall repair, plaster touch-ups, and smooth surface preparation.",
+      },
+
+      mouldingsTrimFinishing: {
+        title: "Mouldings & Trim Finishing",
+        description:
+          "Detailed finishing for baseboards, crown mouldings, window trim, door frames, and accent trim.",
+      },
+
+      exteriorBrickStucco: {
+        title: "Exterior Brick & Stucco",
+        description:
+          "Modernize brick and stucco surfaces with professional exterior painting and curb appeal upgrades.",
+      },
+    },
+  },
+
+  fr: {
+    badge: "Services de peinture résidentielle",
+
+    title:
+      "Services complets de peinture et de finition pour votre maison",
+
+    description:
+      "RJ Painting offre des services complets de peinture et de finition résidentielle aux propriétaires de l’Ouest-de-l’Île de Montréal et des environs.",
+
+    learnMore: "En savoir plus",
+
+    services: {
+      interiorPainting: {
+        title: "Peinture intérieure",
+        description:
+          "Peinture intérieure propre et moderne pour les salons, cuisines, chambres, couloirs, sous-sols et repeints complets de la maison.",
+      },
+
+      exteriorPainting: {
+        title: "Peinture extérieure",
+        description:
+          "Une peinture extérieure durable conçue pour améliorer l’apparence de votre maison et la protéger contre les saisons changeantes de Montréal.",
+      },
+
+      deckPaintingStaining: {
+        title: "Peinture et teinture de terrasses",
+        description:
+          "Redonnez vie aux surfaces extérieures en bois grâce à une préparation, une peinture et une teinture professionnelles.",
+      },
+
+      deckCleaningProtection: {
+        title: "Nettoyage et protection de terrasses",
+        description:
+          "Nettoyez, rafraîchissez et protégez les surfaces de votre terrasse contre les intempéries, l’humidité, la saleté et l’usure saisonnière.",
+      },
+
+      plasteringSurfaceRepairs: {
+        title: "Plâtrage et réparation des surfaces",
+        description:
+          "Réparation de murs, fissures, petits dommages de cloison sèche, retouches de plâtre et préparation de surfaces lisses.",
+      },
+
+      mouldingsTrimFinishing: {
+        title: "Moulures et finition",
+        description:
+          "Finition soignée des plinthes, moulures couronnées, contours de fenêtres, cadres de portes et moulures décoratives.",
+      },
+
+      exteriorBrickStucco: {
+        title: "Brique extérieure et stuc",
+        description:
+          "Modernisez les surfaces de brique et de stuc grâce à une peinture extérieure professionnelle et améliorez l’apparence de votre maison.",
+      },
+    },
+  },
+} as const;
 
 export default function ServicesPreview() {
-  return (
-    <section className="relative overflow-hidden bg-white py-24">
-      <div className="absolute left-0 top-20 h-80 w-80 rounded-full bg-[#263E5A]/5 blur-3xl" />
-      <div className="absolute bottom-10 right-0 h-80 w-80 rounded-full bg-[#8B2E35]/5 blur-3xl" />
+  const pathname = usePathname();
 
+  const lang: "en" | "fr" = pathname.startsWith("/fr")
+    ? "fr"
+    : "en";
+
+  const t = translations[lang];
+
+  const localizedHref = (href: string) => {
+    return `/${lang}${href}`;
+  };
+
+  return (
+    <section className="relative overflow-hidden bg-white py-24 sm:py-28">
       <div className="relative mx-auto max-w-7xl px-6">
+
+        {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,27 +194,27 @@ export default function ServicesPreview() {
           className="mx-auto max-w-3xl text-center"
         >
           <div className="inline-flex rounded-full bg-[#263E5A]/10 px-4 py-2 text-sm font-semibold text-[#263E5A]">
-            Residential Painting Services
+            {t.badge}
           </div>
 
           <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-[#152536] sm:text-5xl">
-            Complete Painting & Finishing Services For Your Home
+            {t.title}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-[#152536]/70">
-            RJ Painting provides complete residential painting and finishing
-            services for homeowners throughout Montreal’s West Island and
-            surrounding areas.
+            {t.description}
           </p>
         </motion.div>
 
+        {/* SERVICES GRID */}
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => {
+          {serviceConfig.map((service, index) => {
             const Icon = service.icon;
+            const serviceText = t.services[service.key];
 
             return (
               <motion.div
-                key={service.title}
+                key={service.key}
                 initial={{ opacity: 0, y: 34 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{
@@ -122,18 +234,19 @@ export default function ServicesPreview() {
                   </div>
 
                   <h3 className="mt-7 text-2xl font-extrabold text-[#152536]">
-                    {service.title}
+                    {serviceText.title}
                   </h3>
 
                   <p className="mt-4 max-w-xl text-sm leading-7 text-[#152536]/70">
-                    {service.description}
+                    {serviceText.description}
                   </p>
 
                   <Link
-                    href={service.href}
+                    href={localizedHref(service.href)}
                     className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#8B2E35]"
                   >
-                    Learn More
+                    {t.learnMore}
+
                     <ArrowRight
                       size={17}
                       className="transition group-hover:translate-x-1"
