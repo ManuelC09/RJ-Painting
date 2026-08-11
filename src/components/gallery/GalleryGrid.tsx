@@ -434,7 +434,7 @@ const translations = {
     description:
       "Every project represents the level of preparation, cleanliness, and care RJ Painting brings to residential homes.",
 
-    beforeAfter: "Before / After",
+    beforeAfter: "Click to view Before / After",
     closeProject: "Close project",
 
     categories: {
@@ -460,7 +460,7 @@ const translations = {
     description:
       "Chaque projet reflète le niveau de préparation, de propreté et de soin que RJ Painting apporte aux maisons de ses clients.",
 
-    beforeAfter: "Avant / Après",
+    beforeAfter: "Cliquez pour voir Avant / Après",
     closeProject: "Fermer le projet",
 
     categories: {
@@ -694,9 +694,9 @@ export default function GalleryGrid({
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                       {/* CATEGORY */}
-                      <div className="absolute left-5 top-5 rounded-full bg-white/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md">
+                      {/* <div className="absolute left-5 top-5 rounded-full bg-white/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white backdrop-blur-md">
                         {translatedCategory}
-                      </div>
+                      </div> */}
 
                       {/* BEFORE / AFTER */}
                       <div className="absolute right-5 top-5 rounded-full bg-[#8B2E35]/90 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.15em] text-white backdrop-blur-md">
@@ -715,7 +715,7 @@ export default function GalleryGrid({
                           <span className="h-[2px] w-10 bg-[#D35B66]" />
 
                           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/75">
-                            RJ Painting
+                            {translatedCategory}
                           </p>
                         </div>
                       </div>
@@ -785,6 +785,8 @@ export default function GalleryGrid({
 
               {/* BEFORE / AFTER COMPONENT */}
               <GalleryBeforeAfter
+                lang={lang}
+                
                 beforeImage={
                   selectedProject.beforeImage
                 }

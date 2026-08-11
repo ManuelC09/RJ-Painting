@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Star,
   ExternalLink,
@@ -399,7 +400,7 @@ export default function GoogleReviews() {
             </div>
 
             {/* MAP */}
-            <div className="h-[240px] w-full border-t border-slate-200 sm:h-[300px] md:h-[360px] lg:h-[420px] lg:border-l lg:border-t-0">
+            {/* <div className="h-[240px] w-full border-t border-slate-200 sm:h-[300px] md:h-[360px] lg:h-[420px] lg:border-l lg:border-t-0">
 
               <iframe
                 src="https://www.google.com/maps?q=R%20J%20Painting%20Montreal%20West%20Island&output=embed"
@@ -412,7 +413,17 @@ export default function GoogleReviews() {
                 title={t.mapTitle}
               />
 
-            </div>
+            </div> */}
+
+            <div className="relative h-[240px] w-full overflow-hidden border-t border-slate-200 sm:h-[300px] md:h-[360px] lg:h-[420px] lg:border-l lg:border-t-0">
+            <Image
+              src="/images/rj-map.png"
+              alt={t.mapTitle}
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
 
           </div>
         </motion.div>

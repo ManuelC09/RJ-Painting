@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import type { Product } from "./productsData";
 
 type ProductSectionProps = {
+  lang: "en" | "fr";
   id: string;
   label: string;
   title: string;
@@ -13,6 +14,7 @@ type ProductSectionProps = {
 };
 
 export default function ProductSection({
+  lang,
   id,
   label,
   title,
@@ -24,10 +26,20 @@ export default function ProductSection({
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              y: 28,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
+            viewport={{
+              once: true,
+            }}
           >
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#8B2E35]">
               {label}
@@ -39,10 +51,21 @@ export default function ProductSection({
           </motion.div>
 
           <motion.p
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              y: 28,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.7,
+              delay: 0.1,
+            }}
+            viewport={{
+              once: true,
+            }}
             className="max-w-xl text-base leading-8 text-[#152536]/70"
           >
             {description}
@@ -53,10 +76,21 @@ export default function ProductSection({
           {products.map((product, index) => (
             <motion.article
               key={product.name}
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: index * 0.06 }}
-              viewport={{ once: true }}
+              initial={{
+                opacity: 0,
+                y: 28,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 0.55,
+                delay: index * 0.06,
+              }}
+              viewport={{
+                once: true,
+              }}
               className="group flex h-full flex-col overflow-hidden rounded-[2rem] border border-[#152536]/10 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex min-h-[320px] items-center justify-center bg-[#F8F5F0] p-8">
@@ -73,7 +107,7 @@ export default function ProductSection({
               <div className="flex flex-1 flex-col p-8">
                 <div className="mb-5 flex items-center justify-between gap-3">
                   <span className="inline-flex rounded-full bg-[#8B2E35]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.12em] text-[#8B2E35]">
-                    {product.category}
+                    {product.category[lang]}
                   </span>
 
                   <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#263E5A]/45">
@@ -86,7 +120,7 @@ export default function ProductSection({
                 </h3>
 
                 <p className="mt-4 flex-1 text-base leading-8 text-[#152536]/70">
-                  {product.description}
+                  {product.description[lang]}
                 </p>
               </div>
             </motion.article>
