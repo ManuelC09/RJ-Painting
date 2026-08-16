@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 
 const translations = {
   en: {
-    ownerBadge: "Home by the Owner",
+    ownerBadge: "By the Owner",
 
     titleBefore: "Transform Your Home With",
     titleHighlight: "Professional Painting",
@@ -47,7 +47,7 @@ That's what RJ Painting brings to you. I have been in this business for 36 years
   },
 
   fr: {
-    ownerBadge: "Service par le propriétaire",
+    ownerBadge: "Par le propriétaire",
 
     titleBefore: "Transformez votre maison avec une",
     titleHighlight: "peinture professionnelle",

@@ -19,6 +19,8 @@ const translations = {
 
     titleBefore: "Trusted Results For",
 
+    ownerBadge: "By the Owner",
+
     description:
       "By choosing RJ Painting, you can expect a team of professionals who are dedicated to delivering exceptional results. Our commitment to quality and customer satisfaction ensures that your project will be completed to the highest standards.",
   },
@@ -27,6 +29,8 @@ const translations = {
     badge: "Service en vedette",
 
     titleBefore: "Des résultats de confiance pour",
+
+    ownerBadge: "Par le propriétaire",
 
     description:
       "En choisissant RJ Painting, vous pouvez compter sur des professionnels dévoués à fournir des résultats exceptionnels. Notre engagement envers la qualité et la satisfaction de nos clients permet de réaliser chaque projet selon des standards élevés.",
@@ -72,6 +76,10 @@ export default function ServiceTestimonial({
 
                 <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-[#D35B66]">
                   {t.badge}
+                </p>
+
+                <p className="mt-8 text-sm font-bold uppercase tracking-[0.25em] text-white/100]">
+                  {t.ownerBadge}
                 </p>
 
                 <h2 className="mt-4 text-3xl font-extrabold leading-tight sm:text-4xl">
